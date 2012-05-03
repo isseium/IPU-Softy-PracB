@@ -1,0 +1,294 @@
+\documentclass[a4j]{jarticle}
+
+\usepackage{ascmac}
+
+\begin{document}
+
+\section{複合代入演算子}
+目指せプログラマー\cite{mezase}のC言語の複合代入演算子のページによると、次の表にまとめることができる。
+
+\begin{tabular}{c|l|l}
+複合代入演算子 & 意味 & 通常の演算子での記述\\
+\hline
+\hline
+ a += b& aにbを加えた値をaに代入する & a=a+b\\
+ a -= b& aからbを引いた値をaに代入する & a=a-b\\
+ a *= b& aとbを乗じた値をaに代入する & a=a*b\\
+ a /= b& a÷bをaに代入する & a=a/b\\
+ a \verb!%!= b & a÷bの余りをaに代入する & a=a\verb!%!b\\
+\end{tabular}
+
+\section{和を求めるプログラム}
+プログラムのソースと実行結果を以下に示す。
+\footnotesize
+\begin{itembox}[l]{ソース}
+\begin{verbatim}
+/* 2.c */
+#include <stdio.h>
+
+int main()
+{
+  int a, b;
+
+  printf("a: ");
+  scanf("%d",&a);
+
+  printf("b: ");
+  scanf("%d", &b);
+
+  printf(" a = %d, b = %d\n", a, b);
+  printf(" a + b = %d\n", a + b);
+
+  return 0;
+}
+\end{verbatim}
+\end{itembox}
+
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac2] $cc -o 2 2.c
+[~/report/softB/prac2] $./2 
+a: 5
+b: 7
+ a = 5, b = 7
+ a + b = 12
+\end{verbatim}
+\end{itembox}
+
+
+\newpage
+\normalsize
+
+\section{商と余を求めるプログラム}
+プログラムのソースと実行結果を以下に示す。
+\footnotesize
+\begin{itembox}[l]{ソース}
+\begin{verbatim}
+/* 3.c */
+#include <stdio.h>
+int main()
+{
+  int a, b;
+
+  printf("a: ");
+  scanf("%d",&a);
+
+  printf("b: ");
+  scanf("%d", &b);
+
+  printf(" a = %d, b = %d\n", a, b);
+  if ( b != 0 )                 /* 0 で割るというエラーを防止 */
+    printf(" a / b = %d ... %d\n", a / b, a % b);
+  else
+    printf("0 では割れません\n");
+    
+  return 0;
+}
+\end{verbatim}
+\end{itembox}
+
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac2] $cc -o 3 3.c
+[~/report/softB/prac2] $./3 
+a: 12345
+b: 9
+ a = 12345, b = 9
+ a / b = 1371 ... 6
+
+\end{verbatim}
+\end{itembox}
+
+\newpage
+\normalsize
+
+\section{展開を行うプログラム}
+プログラムのソースと実行結果を以下に示す。
+\footnotesize
+\begin{itembox}[l]{ソース}
+\begin{verbatim}
+/* 4.c */
+#include <stdio.h>
+
+int main()
+{
+  int a, b, c, d;
+
+  printf("(ax+b)(cx+d)\n");
+
+  printf("a: ");
+  scanf("%d",&a);
+
+  printf("b: ");
+  scanf("%d", &b);
+
+  printf("c: ");
+  scanf("%d",&c);
+
+  printf("d: ");
+  scanf("%d", &d);
+
+
+  printf(" (%d)*x*x+(%d)*x+(%d)\n",a*c, a*d+b*c, b*d);
+
+  return 0;
+}
+\end{verbatim}
+\end{itembox}
+
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac2] $cc -o 4 4.c
+[~/report/softB/prac2] $./4
+(ax+b)(cx+d)
+a: 1
+b: -5
+c: 1
+d: 3
+ (1)*x*x+(-2)*x+(-15)
+\end{verbatim}
+\end{itembox}
+
+\newpage
+\normalsize
+
+\section{２次関数の解を求めるプログラム}
+プログラムのソースと実行結果を以下に示す。
+\footnotesize
+\begin{itembox}[l]{ソース}
+\begin{verbatim}
+/* 5.c */
+#include <stdio.h>
+
+int main()
+{
+  int a, b, c, x, y;
+
+  printf("a: ");
+  scanf("%d",&a);
+
+  printf("b: ");
+  scanf("%d", &b);
+
+  printf("c: ");
+  scanf("%d",&c);
+
+  printf(" y = ax*x + bx + c = (%d)x*x + (%d)x + (%d)\n", a, b, c);
+
+  printf("x: ");
+  scanf("%d", &x);
+
+  /* y を求める */
+  y =  a*x*x + b*x + c;
+  
+  printf(" y = %d, if x = %d.\n", y, x);
+
+  return 0;
+}
+\end{verbatim}
+\end{itembox}
+
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac2] $ ./a.out 
+a: -1
+b: 6
+c: -4
+ y = ax*x + bx + c = (-1)x*x + (6)x + (-4)
+x: 3
+ y = 5, if x = 3.
+\end{verbatim}
+\end{itembox}
+
+\newpage
+
+\normalsize
+\section{条件式}
+\begin{itemize}
+\item 条件式1: \verb!((a >= 2 || b == 1) && c > 0)!\\
+a  \textgreater= 2 は偽、b == 1 は真であり、この論理和は真となる。
+
+次に c  \textgreater 0 は真であり、 \verb!(a >= 2 || b == 1)!も真であるから論理積は
+      真となる。
+
+すなわち、条件式1 は真である。
+
+\item 条件式2: \verb!(a >= 2 || b == 1 && c > 0)!\\
+b == 1 と c \textgreater 0 はそれぞれ真であり、この論理積は真となる。
+
+次に a  \textgreater= 2 は真であり、\verb!b == 1 && c > 0! も真であるか
+      ら論理和は真となる。
+
+すわわち、条件式2 は真である。  
+
+\item 条件式3: \verb+((a >= 2 || b == 1 && c > 0) != 0)+\\
+条件式2 より、 \verb!(a >= 2 || b == 1 && c > 0)! は真であるから、条件式
+      3 は真となる。
+
+\end{itemize}
+
+\section{課題6 の確認}
+プログラムのソースと実行結果を以下に示す。
+\footnotesize
+\begin{itembox}[l]{ソース}
+\begin{verbatim}
+/* 7.c */
+#include <stdio.h>
+
+int main()
+{
+  int a=1, b=1, c=1;
+
+  printf("1 : %d\n",((a >= 2 || b == 1) && c > 0));
+  printf("2 : %d\n",(a >= 2 || b == 1 && c > 0));
+  printf("3 : %d\n",((a >= 2 || b == 1 && c > 0) != 0));
+
+  return 0;
+}
+\end{verbatim}
+\end{itembox}
+
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac2] $cc -o 7 7.c
+[~/report/softB/prac2] $./7
+1 : 1
+2 : 1
+3 : 1
+\end{verbatim}
+\end{itembox}
+
+\normalsize
+
+C言語では、演算子を用いて評価される式の値の偽と真は、それぞれ 0 と 非 0 で
+判断されている。
+
+すなわち出力した値が、0 以外 であれば真、0 であれば偽ということである。
+
+このプログラムの出力結果はすべて 0 以外であるため 条件 1 から 3 はすべて真であ
+ると言える。
+
+\newpage
+\section{課題6 が一定条件になる範囲}
+\begin{itemize}
+\item 条件式1, 2 が共に真\\
+b = 1, c $>$ 0 (Aは任意)\\
+または a $\ge$ 2, b = 0, c = 1
+\item 条件式1 が真, 2 が偽\\
+なし
+\item 条件式1 が偽, 2 が真\\
+a $\ge$2, c $\le$0 (Bは任意)\\
+\item 条件式1, 2 が共に偽\\ 
+a $<$ 2, b $\ne$ 1 , c $\le$ 0\\
+または a $<$ 2, b $\ne$ 1, c $>$ 0\\
+または a $<$ 2, b = 1, c $\le$ 0 
+\end{itemize}
+
+\begin{thebibliography}{9}
+\bibitem{mezase}
+ecb, 目指せプログラマー, http://www5c.biglobe.ne.jp/~ecb/index.html, 2006.
+\end{thebibliography}
+\end{document}
+
+
+

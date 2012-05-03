@@ -1,0 +1,202 @@
+\documentclass[a4j]{jarticle}
+\usepackage{verbatim}
+\usepackage{ascmac}
+\usepackage[dvips]{graphicx}
+
+\begin{document}
+\newcommand{\inc}[1]{
+\footnotesize
+プログラムのソースと実行結果を以下に示す。
+\begin{itembox}[l]{ソース}
+ \verbatiminput{#1}
+\end{itembox}
+%\normalsize
+}
+
+
+
+\section{プログラム作成(1)}
+\inc{1.c}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac8] $./1
+(2) r = 10.000000, l = 62.831853, s = 314.159265
+(3) ave = 1.270000, var = 0.610420
+(4) c(2.500,-0.500)
+\end{verbatim}
+\end{itembox}
+
+\section{プログラム作成(2)}
+\subsection{2 (1) 配列版}
+\inc{2-1-a.c}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac8] $./2-1-a  
+Input string: test
+Length (array): 4
+\end{verbatim}
+\end{itembox}
+
+\newpage
+
+\subsection{2 (1) ポインタ版}
+\inc{2-1-p.c}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac8] $./2-1-p
+Input string: test
+Length (pointer): 4
+\end{verbatim}
+\end{itembox}
+
+\newpage
+
+\subsection{2 (2) 配列版}
+\inc{2-2-a.c}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac8] $./2-2-a
+Input string A: abcdefg
+Input string B: abcd
+Number :3
+Compare (array): 0
+\end{verbatim}
+\end{itembox}
+
+\newpage
+
+\subsection{2 (2) ポインタ版}
+\inc{2-2-p.c}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac8] $./2-2-p
+Input string A: abcdefg
+Input string B: abcd
+Number :3
+Compare (pointer): 0
+\end{verbatim}
+\end{itembox}
+
+\newpage
+
+\subsection{2 (3) 配列版}
+\inc{2-3-a.c}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac8] $./2-3-a
+Input string A: abcdefg
+Input string B: hijklmn
+Connect (array): abcdefghijklmn
+\end{verbatim}
+\end{itembox}
+
+\newpage
+
+\subsection{2 (3) ポインタ版}
+\inc{2-3-p.c}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac8] $./2-3-p
+Input string A: abcdefg
+Input string B: hijklmn
+Connect (pointer): abcdefghijklmn
+\end{verbatim}
+\end{itembox}
+
+\newpage
+
+\section{文字列の交換}
+\inc{3.c}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac8] $./3
+a: abcdefg
+b: hijklmn
+a: hijklmn
+b: abcdefg
+\end{verbatim}
+\end{itembox}
+
+\newpage
+
+\section{文字列出現回数}
+\inc{4.c}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac8] $./4  
+2
+\end{verbatim}
+\end{itembox}
+
+\newpage
+
+\section{int 型を char 型に変換}
+\inc{5.c}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac8] $./5
+Input number: 1234
+int: 1234 -> char: 1234
+\end{verbatim}
+\end{itembox}
+
+\newpage
+
+\section{星座出力}
+\inc{6.c}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac8] $./6
+Enter your birthday [mm/dd] : 01/23
+Your birth day is Jan. 23.
+Therefore, your constellation is the AQUARIUS.
+[~/report/softB/prac8] $./6
+Enter your birthday [mm/dd] : 13/01
+Error : strange data was entered.
+[~/report/softB/prac8] $./6
+Enter your birthday [mm/dd] : 02/30
+Error : strange data was entered.
+\end{verbatim}
+\end{itembox}
+
+\newpage
+
+
+\section{暗号文}
+\tiny
+プログラムのソースと実行結果を以下に示す。
+\begin{itembox}[l]{ソース}
+ \verbatiminput{7.c}
+\end{itembox}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac8] $./7
+You've got
+ it! Did y
+ou underst
+and usage 
+of multi-d
+imensional
+ array of 
+char varia
+ble? Good 
+luck!  
+\end{verbatim}
+\end{itembox}
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

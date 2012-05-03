@@ -1,0 +1,644 @@
+<html><head><!-- Ad_setup.html --><meta http-equiv="content-type" content="text/html; charset=euc-jp"><title>Yahoo!ブリーフケース - 一覧表示</title>
+
+<script language="javascript">
+var text;
+
+function docs_check(numphotos) {
+    var i;
+    var numselected = 0;
+
+    for (i=0; document.docs_form.elements[i]; i++) {
+        if (document.docs_form.elements[i].type == "checkbox" &&
+            document.docs_form.elements[i].name == ".docs" &&
+            document.docs_form.elements[i].checked) {
+            if (numphotos == -1)
+                return true;
+            else
+                numselected++;
+        }
+	else if (document.docs_form.elements[i].type == "radio" &&
+            document.docs_form.elements[i].name == ".docs" &&
+            document.docs_form.elements[i].checked) {
+                return true;
+	}
+    }
+
+    if (numphotos != -1 && numselected >= 1 && numselected <= numphotos)
+        return true;
+
+    if (text) {
+        alert(text);
+        text = null;
+        return false;
+    }
+
+    return true;
+}
+
+function docs_text(t) {
+    text = t;
+}
+
+function CheckAll(checked) {
+    len = document.docs_form.elements.length;
+    var i;
+    for (i=0; i < len; i++) {
+        if (document.docs_form.elements[i].name=='.docs') {
+            document.docs_form.elements[i].checked=checked;
+        }
+    }
+}
+</script><!-- docCheck.html --></head>
+  
+
+
+																
+
+
+<body topmargin="0" marginheight="0"> 
+<center>
+
+ 
+<script> 	 
+<!-- 
+	if (document.cookie != "" && document.cookie.indexOf("W56aFB") == -1) {
+		window.open( "https://login.yahoo.co.jp/config/login?.src=bc&.done=http%3a//briefcase.yahoo.co.jp/&.intl=jp&.linkdone=http%3a//briefcase.yahoo.co.jp/", "_top" ); 	 
+	} 	 
+// -->
+</script>
+
+
+<div align="center"><table border="0" cellpadding="0" cellspacing="0" width="675"><tbody><tr><td>
+<!-- info_insertion UHD -->
+<div align="center">
+<table border="0" cellpadding="2" cellspacing="0" width="100%"><tbody><tr bgcolor="#efefef"><td>
+<table border="0" cellpadding="2" cellspacing="0" width="100%">
+<tbody><tr><form style="margin: 0pt;" action="http://ard.yahoo.co.jp/SIG=129te6fvn/M=300206098.300815562.302427151.300758587/D=jpbrief/S=150716003:UHD/Y=jp/A=300641942/R=0/SIG=1123kvr6o/*http://search.yahoo.co.jp/search" name="p" target="uhd"></form>
+<td valign="middle" width="97%"><small style="font-size: 12px;">&nbsp;<a href="http://ard.yahoo.co.jp/SIG=129te6fvn/M=300206098.300815562.302427151.300758587/D=jpbrief/S=150716003:UHD/Y=jp/A=300641942/R=1/*http://ard.yahoo.co.jp/auction/universal/061017/evt=71050/SIG=11h3mp96m/*http://recommend.yahoo.co.jp/auctions/promotion">レアものを格安で！　今ならヤフオク参加無料</a></small></td>
+<td align="right" nowrap="nowrap" valign="middle" width="1%"><small style="font-size: 12px; color: rgb(54, 54, 54);">Yahoo!検索</small></td>
+<td align="right" valign="middle" width="1%"><small><input size="24" style="height: 21px;" maxlength="100" name="p" type="text"><input name="fr" value="ush-jpbrief" type="hidden"></small></td>
+<td valign="middle" width="1%"><small><input value="検索" style="margin: 0pt 8px 0pt 0pt;" type="submit"></small></td>
+</tr>
+</tbody></table>
+</td></tr>
+</tbody></table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr><td bgcolor="#8598ba"><img src="5_files/clear.gif" border="0" height="1" width="1"></td></tr>
+<tr><td bgcolor="#dcdcdc"><img src="5_files/clear.gif" border="0" height="1" width="1"></td></tr>
+</tbody></table>
+</div>
+<img src="5_files/clear.gif" border="0" height="6" width="1"><br><script language="javascript">
+if(window.yzq_d==null)window.yzq_d=new Object();
+window.yzq_d['1FoeAMpdVXM-']='&U=13j89tn62%2fN%3d1FoeAMpdVXM-%2fC%3d300206098.300815562.302427151.300758587%2fD%3dUHD%2fB%3d300641942';
+</script><noscript><div style="position:absolute;"><img width=1
+height=1 alt=""
+src="http://b1.yahoo.co.jp/b?P=keWeXspdV7nnjBu7RDxibgrF0pwoQUVrrloABeYE&T=13v7e9fro%2fX%3d1164684890%2fE%3d150716003%2fR%3djpbrief%2fK%3d5%2fV%3d2.1%2fW%3dH%2fY%3djp%2fF%3d3338432230%2fQ%3d-1%2fS%3d1%2fJ%3d3B545DCA&U=13j89tn62%2fN%3d1FoeAMpdVXM-%2fC%3d300206098.300815562.302427151.300758587%2fD%3dUHD%2fB%3d300641942"></div></noscript><!-- info_insertion UHD -->
+</td></tr></tbody></table></div>
+
+<table border="0" cellpadding="0" cellspacing="0" width="675">
+<tbody><tr>
+
+		<td width="30%">
+		 
+		<a href="http://briefcase.yahoo.co.jp/" target="_top">
+		<img src="5_files/bc_main.gif" alt="Yahoo!ブリーフケース" border="0" height="40" width="310"></a></td>
+				<td valign="bottom" width="1%">&nbsp;</td> 
+
+		<td align="right" valign="bottom" width="50%"><font size="-1">
+
+
+
+
+		<a href="http://www.yahoo.co.jp/" target="_top">Yahoo! JAPAN</a> -
+				<a href="http://photos.yahoo.co.jp/">フォト</a> - <a href="http://help.yahoo.co.jp/help/jp/bc" target="_top">ヘルプ</a>
+				</font>
+		<br>
+		<hr noshade="noshade" size="1">
+		</td>
+	<td width="1%">
+ 
+</td>
+</tr></tbody></table>
+<br>
+
+
+<!-- nbc_promo_top.html -->
+
+
+<!-- masthead.html -->
+
+
+
+
+<!-- dormant_acct.html -->
+
+<!-- info_insertion:N -->
+<!-- http://ard.yahoo.co.jp/SIG=1272dgrdk/M=300046189.300420876.302111848.300346012/D=jpbrief/S=150716003:N/Y=jp/A=300209973/R=0/SIG=10p0vmdj5/?http://www.yahoo.co.jp/ --><script language="javascript">
+if(window.yzq_d==null)window.yzq_d=new Object();
+window.yzq_d['1VoeAMpdVXM-']='&U=13hjkb036%2fN%3d1VoeAMpdVXM-%2fC%3d300046189.300420876.302111848.300346012%2fD%3dN%2fB%3d300209973';
+</script><noscript><div style="position:absolute;"><img width=1
+height=1 alt=""
+src="http://b1.yahoo.co.jp/b?P=keWeXspdV7nnjBu7RDxibgrF0pwoQUVrrloABeYE&T=13va9ek80%2fX%3d1164684890%2fE%3d150716003%2fR%3djpbrief%2fK%3d5%2fV%3d2.1%2fW%3dH%2fY%3djp%2fF%3d3818775318%2fQ%3d-1%2fS%3d1%2fJ%3d3B545DCA&U=13hjkb036%2fN%3d1VoeAMpdVXM-%2fC%3d300046189.300420876.302111848.300346012%2fD%3dN%2fB%3d300209973"></div></noscript><!-- info_insertion:N -->
+<p>
+
+        <table border="0" cellpadding="2" cellspacing="0" width="675">
+<tbody><tr bgcolor="#dcdcdc">
+<td nowrap="nowrap"><font color="#000000" size="-1"><b>こんにちは、yamato39aduさん</b></font></td>
+
+<td colspan="2" align="right"><font size="-1">
+				<a href="http://login.yahoo.co.jp/config/login?logout=1&amp;.src=bc&amp;.intl=jp&amp;.done=http://briefcase.yahoo.co.jp" target="_top">ログアウト</a>
+			</font>
+      </td>
+</tr></tbody></table>
+
+<table border="0" cellpadding="4" cellspacing="0" width="675">
+<tbody><tr bgcolor="#cccc99">
+  <td><font size="+1"><b>Yahoo!ブリーフケース</b></font></td>
+
+<td align="right" nowrap="nowrap">
+      <table border="0" cellpadding="4" cellspacing="0"><tbody><tr>
+<td><font size="-1">このフォルダは<b>非公開</b>です。</font></td>
+		  <td bgcolor="#e6e6c8">&nbsp;<font size="-1"><b> 	  <a href="http://edit.briefcase.yahoo.co.jp/edit/yamato39adu/modify_briefcase_folder?.dir=/9253&amp;.done=http%3a//briefcase.yahoo.co.jp/bc/yamato39adu/lst%3f.dir=/9253">編集</a></b></font>&nbsp;</td>
+			</tr></tbody></table>
+    </td>
+  </tr></tbody></table>
+
+<!-- nbc_gtg_title.html -->
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="675">
+<tbody><tr><td colspan="3" height="4"></td></tr>
+<tr>
+
+
+<td valign="top" width="170">
+<img src="5_files/clear_002.gif" height="1" width="170"><br>
+<table border="0" cellpadding="1" cellspacing="0" width="100%">
+  <tbody>
+    <tr>
+      <td bgcolor="#e0ddbc">
+		
+
+	
+
+						<table border="0" cellpadding="2" cellspacing="0" width="100%">
+		<tbody><tr bgcolor="#ffffff">
+		<td align="center"><font size="-1">現在1GBのうち1.09 MB（0％）を使用しています。<br><br>
+				<img src="5_files/orange.gif" alt="現在容量の0％を使用しています。" border="0" height="9" width="0"><img src="5_files/gray.gif" alt="現在容量の0％を使用しています。" border="0" height="9" width="100">&nbsp; &nbsp;0％
+								</font>
+		</td></tr>
+	</tbody></table>
+						
+</td>
+    </tr>
+    <tr>
+      <td><img alt="" src="5_files/clear_002.gif" height="8"></td>
+    </tr>
+
+    <tr>
+      <td bgcolor="#ffcc99"><table border="0" cellpadding="3" cellspacing="0" width="100%">
+            <tbody><tr>
+              <td bgcolor="#ffffff"><font size="-1"><a href="http://premium.yahoo.co.jp/"><img src="5_files/yj_prm28.gif" alt="Yahoo!プレミアム" align="left" border="0" height="28" width="28"></a><a href="http://rd.yahoo.co.jp/premium_top/servicedept/briefcase/evt=26041/SIG=10vcdgpit/*http%3A//premium.yahoo.co.jp/">Yahoo!プレミアム</a>会員もしくは<a href="http://bbpromo.yahoo.co.jp/promotion/usable/photos/index.html">Yahoo!
+                    BB</a>会員なら、フォト／ブリーフケースの容量があわせて最大<b>2GBに！</b></font></td>
+            </tr>
+            <tr>
+              <td align="center" bgcolor="#eeeeee"><font size="-1"><a href="http://premium.photos.yahoo.co.jp/premium_promo?.src=bc">詳細はこちら</a></font></td>
+            </tr>
+          </tbody></table></td>
+    </tr>
+    <tr>
+      <td><img alt="" src="5_files/clear_002.gif" height="8"></td>
+    </tr>
+	<tr>
+      <td bgcolor="#ffcc99">
+<table border="0" cellpadding="3" cellspacing="0" width="100%">
+<tbody><tr>
+<td bgcolor="#ffffff"><font size="-1"><a href="http://rd.yahoo.co.jp/volunteer/donation/briefcase/SIG=11kfc5ndo/*http%3A//volunteer.yahoo.co.jp/donation/index.html"><img src="5_files/vol_28.gif" alt="Yahoo!ボランティア" border="0" height="27" width="28"></a></font></td>
+<td bgcolor="#ffffff" width="99%"><font size="-1"><a href="http://rd.yahoo.co.jp/volunteer/donation/briefcase/SIG=11kfc5ndo/*http%3A//volunteer.yahoo.co.jp/donation/index.html">募金で温かいご支援を！</a></font></td>
+</tr>
+</tbody></table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr>
+<td><img alt="" src="5_files/clear_002.gif" height="1"></td>
+</tr>
+</tbody></table>
+<table border="0" cellpadding="3" cellspacing="0" width="100%">
+<tbody><tr>
+<td bgcolor="#ffffff"><font size="-1"><a href="http://rd.yahoo.co.jp/days/insidelink/bc/days/SIG=1165n477k/*http%3A//recommend.yahoo.co.jp/days/"><img src="5_files/days_28.gif" alt="Yahoo! Days" border="0"></a></font></td>
+<td bgcolor="#ffffff" width="99%"><font size="-1"><a href="http://rd.yahoo.co.jp/days/insidelink/bc/days/SIG=1165n477k/*http%3A//recommend.yahoo.co.jp/days/">ソーシャル・ネットワーキングサービス、Yahoo!
+      Daysに参加しよう！</a></font></td>
+</tr>
+</tbody></table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr>
+<td><img alt="" src="5_files/clear_002.gif" height="1"></td>
+</tr>
+</tbody></table>
+<table border="0" cellpadding="3" cellspacing="0" width="100%">
+            <tbody><tr>
+<td bgcolor="#ffffff"><font size="-1"><a href="http://rd.yahoo.co.jp/photostop/yservice/bri/SIG=112p3nrl6/*http%3A//secondlife.yahoo.co.jp/"><img src="5_files/sc_28x.gif" alt="Yahoo!セカンドライフ" border="0" height="27" width="28"></a></font></td>
+              <td bgcolor="#ffffff" width="99%"><font size="-1"><a href="http://rd.yahoo.co.jp/photostop/yservice/bri/SIG=112p3nrl6/*http%3A//secondlife.yahoo.co.jp/">Yahoo!セカンドライフでこれからの人生を楽しもう！</a></font></td>
+            </tr>
+          </tbody></table>
+		  
+	    </td>
+    </tr>
+	<tr>
+      <td><img alt="" src="5_files/clear_002.gif" height="8"></td>
+    </tr>
+    <tr>
+      <td align="center" bgcolor="#dbe4ee"><table border="0" cellpadding="0" cellspacing="0" width="100%">
+          <tbody><tr>
+            <td bgcolor="#eaeff4" height="1"><img alt="" src="5_files/clear_002.gif" height="1"></td>
+          </tr>
+          <tr>
+            <td height="20"><font color="#000000" size="-1"><b>&nbsp;初めての方へ</b></font></td>
+          </tr>
+          <tr>
+            <td bgcolor="#b6c7e5"><img alt="" src="5_files/clear_002.gif" height="1"></td>
+          </tr>
+        </tbody></table>
+          <table border="0" cellpadding="3" cellspacing="0" width="100%">
+            <tbody>
+              <tr>
+<td align="center" bgcolor="#ffffff"><a href="http://help.yahoo.co.jp/guide/jp/bc/promo/"><img src="5_files/promo_b.gif" alt="使ってみよう！　Yahoo!ブリーフケース　便利な使い方を紹介！" border="0" vspace="5"></a></td>
+</tr>
+<tr>
+<td bgcolor="#ffffff">
+<font size="-1">・<a href="http://help.yahoo.co.jp/guide/jp/bc/">使い方ガイド</a><br>・<a href="http://help.yahoo.co.jp/help/jp/bc">ヘルプ</a></font></td>
+</tr>
+            </tbody>
+          </table>
+      </td>
+    </tr>
+
+<!-- adinsert LB -->
+<!-- SpaceID=150716003 loc=LB noad-spid -->
+<script language="javascript">
+if(window.yzq_d==null)window.yzq_d=new Object();
+window.yzq_d['1loeAMpdVXM-']='&U=1269mosfu%2fN%3d1loeAMpdVXM-%2fC%3d-2%2fD%3dLB%2fB%3d-2';
+</script><noscript><div style="position:absolute;"><img width=1
+height=1 alt=""
+src="http://b1.yahoo.co.jp/b?P=keWeXspdV7nnjBu7RDxibgrF0pwoQUVrrloABeYE&T=13vd53bpl%2fX%3d1164684890%2fE%3d150716003%2fR%3djpbrief%2fK%3d5%2fV%3d2.1%2fW%3dH%2fY%3djp%2fF%3d1731538405%2fQ%3d-1%2fS%3d1%2fJ%3d3B545DCA&U=1269mosfu%2fN%3d1loeAMpdVXM-%2fC%3d-2%2fD%3dLB%2fB%3d-2"></div></noscript><!-- adinsert LB -->
+
+    <tr>
+      <td><img alt="" src="5_files/clear_002.gif" height="5"></td>
+    </tr>
+
+    <tr>
+      <td align="center" bgcolor="#dbe4ee"><table border="0" cellpadding="0" cellspacing="0" width="100%">
+          <tbody><tr>
+            <td bgcolor="#eaeff4" height="1"><img alt="" src="5_files/clear_002.gif" height="1"></td>
+          </tr>
+          <tr>
+            <td height="20"><font color="#000000" size="-1"><b>&nbsp;お知らせ</b></font></td>
+          </tr>
+          <tr>
+            <td bgcolor="#b6c7e5"><img alt="" src="5_files/clear_002.gif" height="1"></td>
+          </tr>
+        </tbody></table>
+          <table border="0" cellpadding="3" cellspacing="0" width="100%">
+            <tbody>
+              <tr>
+                <td bgcolor="#ffffff"><font size="-1">・<a href="http://hr.yahoo.co.jp/">ウェブサイトデザイナー募集</a></font></td>
+              </tr>
+              <tr>
+                <td bgcolor="#ffffff"><font size="-1">・<a href="http://help.yahoo.co.jp/help/jp/bc/bc-53.html">ご意見をおよせください</a></font></td>
+              </tr>
+            </tbody>
+          </table></td>
+    </tr>
+    <tr>
+      <td align="center"><img alt="" src="5_files/clear_002.gif" height="5"></td>
+    </tr>
+    <tr>
+      <td align="center" bgcolor="#dbe4ee"><table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody><tr>
+          <td bgcolor="#eaeff4" height="1"><img alt="" src="5_files/clear_002.gif" height="1"></td>
+        </tr>
+        <tr>
+          <td bgcolor="#dbe4ee" height="20"><font color="#000000" size="-1"><b>&nbsp;Yahoo!サービス</b></font></td>
+        </tr>
+        <tr>
+          <td bgcolor="#b6c7e5"><img alt="" src="5_files/clear_002.gif" height="1"></td>
+        </tr>
+      </tbody></table>
+        <table border="0" cellpadding="3" cellspacing="0" width="100%">
+          <tbody>
+            <tr>
+              <td bgcolor="#ffffff"><img src="5_files/photos1.gif" alt="Yahoo!フォト" height="16" width="16"><font size="-1"> <a href="http://rd.yahoo.co.jp/bctop/yservice/SIG=10uurakqe/*http%3A//photos.yahoo.co.jp/"><b>Yahoo!フォト<br>
+              </b></a>- ウェブ上に作成できる、あなただけのフォトアルバム</font></td>
+            </tr>
+            <tr>
+              <td bgcolor="#ffffff"><font size="-1"><img src="5_files/mail1.gif" alt="Yahoo!メール" height="15" width="16"> <a href="http://rd.yahoo.co.jp/bctop/yservice/SIG=10snf77u7/*http%3A//mail.yahoo.co.jp/"><b>Yahoo!メール</b></a><br>
+        - Yahoo!メールの添付写真が自分のアルバムに！</font></td>
+            </tr>
+            <tr>
+              <td bgcolor="#ffffff"><img alt="" src="5_files/clear_002.gif" height="5"></td>
+            </tr>
+          </tbody>
+        </table></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- info_insertion YBBGD -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tbody><tr>
+    <td><img alt="" src="5_files/clear_002.gif" height="10"></td>
+  </tr>
+  <tr>
+    <td align="center">
+
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody><tr>
+<td><a href="http://ard.yahoo.co.jp/SIG=12bvgdsju/M=300208740.300819611.302431690.300639840/D=jpbrief/S=150716003:YBBGD/Y=jp/A=300651253/R=0/SIG=12iriteoa/*http://comics.yahoo.co.jp/kodansha/mitanori01/doragonn01/shoshi/shoshi_0001.html"><img src="5_files/je1ru_chbv9_gslvr7ba-a.gif" alt="あの名作がおトク" border="0" height="31" width="160"></a></td>
+</tr>
+<tr>
+<td align="center"><font size="-1"><a href="http://ard.yahoo.co.jp/SIG=12bvgdsju/M=300208740.300819611.302431690.300639840/D=jpbrief/S=150716003:YBBGD/Y=jp/A=300651253/R=1/SIG=12iriteoa/*http://comics.yahoo.co.jp/kodansha/mitanori01/doragonn01/shoshi/shoshi_0001.html">ドラゴン桜</a></font></td>
+</tr>
+</tbody></table><script language="javascript">
+if(window.yzq_d==null)window.yzq_d=new Object();
+window.yzq_d['11oeAMpdVXM-']='&U=13l20b21c%2fN%3d11oeAMpdVXM-%2fC%3d300208740.300819611.302431690.300639840%2fD%3dYBBGD%2fB%3d300651253';
+</script><noscript><div style="position:absolute;"><img width=1
+height=1 alt=""
+src="http://b1.yahoo.co.jp/b?P=keWeXspdV7nnjBu7RDxibgrF0pwoQUVrrloABeYE&T=13vh42lac%2fX%3d1164684890%2fE%3d150716003%2fR%3djpbrief%2fK%3d5%2fV%3d2.1%2fW%3dH%2fY%3djp%2fF%3d3753661398%2fQ%3d-1%2fS%3d1%2fJ%3d3B545DCA&U=13l20b21c%2fN%3d11oeAMpdVXM-%2fC%3d300208740.300819611.302431690.300639840%2fD%3dYBBGD%2fB%3d300651253"></div></noscript>
+    </td>
+  </tr>
+</tbody></table>
+<!-- info_insertion YBBGD -->
+
+</td>
+<!-- nbc_lhs_include.html -->
+
+<td width="10">&nbsp;</td>
+
+<td valign="top" width="490">
+
+<form action="http://edit.briefcase.yahoo.co.jp/edit/yamato39adu/edit_briefcase_docs" method="post" onsubmit="return docs_check(-1);" name="docs_form">
+<input name=".crumb" value="rTdPGWMrLiA" type="hidden"><input name=".action" id=".action" value="" type="hidden">
+<input name=".userID" id=".userID" value="yamato39adu" type="hidden">
+<input name=".begin" value="1" type="hidden">
+<input name=".briefcaseID" value="yamato39adu" type="hidden">
+<input name=".src" value="bc" type="hidden">
+<input name=".done" value="http://briefcase.yahoo.co.jp/bc/yamato39adu/lst?&amp;.dir=/9253&amp;.src=bc&amp;.view=l" type="hidden">
+<input name=".dir" value="/9253" type="hidden">
+<input name=".orderty" value="" type="hidden">
+<input name="gitem" value="" type="hidden">
+
+
+<table border="0" cellpadding="2" cellspacing="0" width="100%">
+<tbody><tr><td align="left">
+
+<font size="-1">
+
+<a href="http://briefcase.yahoo.co.jp/bc/yamato39adu/rlst?.dir=/&amp;.src=bc&amp;.done=http%3a//briefcase.yahoo.co.jp/bc/yamato39adu/lst%3f%26.dir=/9253%26.src=bc%26.view=l">
+フォルダ一覧</a>
+&nbsp;|&nbsp;&nbsp;<b><a href="http://briefcase.yahoo.co.jp/bc/yamato39adu/lst?.dir=/&amp;.src=bc&amp;.done=http%3a//briefcase.yahoo.co.jp/&amp;.view=l">ファイルフォルダ</a> &gt; ソフトウェア演習B</b></font></td></tr>
+</tbody></table>
+
+
+<!-- nbc_trail_crumb.html -->
+
+
+
+<!-- nbc_rq_warning.html -->
+
+
+
+  <table border="0" cellpadding="1" cellspacing="0" width="100%">
+
+  <tbody><tr><td height="8"></td></tr>
+  <tr>
+<td align="right" valign="middle">
+<font size="-1">
+						<a href="http://edit.briefcase.yahoo.co.jp/edit/yamato39adu/multi_upload_briefcase_doc?.dir=/9253&amp;.src=bc&amp;.action=upload&amp;.view=l&amp;.done=http%3a//briefcase.yahoo.co.jp/bc/yamato39adu/lst%3f%26.dir=/9253%26.src=bc%26.view=l"><b>ファイルを追加</b></a> &nbsp;-&nbsp; <a href="http://edit.briefcase.yahoo.co.jp/edit/yamato39adu/add_briefcase_folder?.dir=/9253&amp;.src=bc&amp;.action=addfolder&amp;.view=l&amp;.done=http%3a//briefcase.yahoo.co.jp/bc/yamato39adu/lst%3f%26.dir=/9253%26.src=bc%26.view=l"><b>フォルダを作成</b></a>
+						</font></td></tr>
+
+<tr><td height="6"></td></tr></tbody></table>
+
+<!-- nbc_function_links.html -->
+
+<table bgcolor="#999999" border="0" cellpadding="1" cellspacing="0" width="100%">
+
+
+<tbody><tr><td>
+<table bgcolor="#ffffff" border="0" cellpadding="2" cellspacing="0" width="100%">
+<tbody><tr>
+<td align="left" nowrap="nowrap" width="70%"><font size="-1"> 2件中1 - 2件を表示
+				</font></td>
+<td align="right" nowrap="nowrap">
+&nbsp;
+</td></tr>
+</tbody></table>
+</td></tr>
+</tbody></table>
+
+
+<!-- nbc_show_file_count.html -->
+<table bgcolor="#ffffff" border="0" cellpadding="2" cellspacing="0" width="100%">
+<tbody>
+<tr bgcolor="#b6c7e5">
+<td bgcolor="#e0ddbc" valign="middle">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr>
+
+
+	<td width="66%">
+		<table border="0" cellpadding="2" cellspacing="0" width="100%"><tbody><tr>
+	
+															<td width="99%"><input name=".actionEmail" onclick="docs_text('メールで送るドキュメントまたはフォルダを少なくとも1つ選んでください。')" value="メール送信" src="5_files/bot_pt2.gif" alt="友だちに送る" border="0" height="24" type="image" width="115"></td>
+												</tr></tbody></table>
+	</td>
+
+
+											<td align="right" width="34%"><table border="0" cellpadding="2" cellspacing="0" width="67%">
+	<tbody><tr>
+				<td><input name=".actionMove" onclick="docs_text('移動するドキュメントまたはフォルダを少なくとも1つ選んでください。')" value="移動" src="5_files/sbot_mov.gif" alt="移動" border="0" height="20" type="image" width="35"></td>
+				<td><input name=".actionCopy" onclick="docs_text('コピーするドキュメントまたはフォルダを少なくとも1つ選んでください。')" value="コピー" src="5_files/sbot_cop.gif" alt="コピー" border="0" height="20" type="image" width="35"></td>
+										<td><input name=".actionDelete" onclick="docs_text('削除するドキュメントまたはフォルダを少なくとも1つ選んでください。.')" value="削除" src="5_files/sbot_del.gif" alt="削除" border="0" height="20" type="image" width="35"></td>
+				</tr></tbody></table>
+	</td>
+
+</tr></tbody></table>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+
+<!--  -->
+<!-- nbc_function_buttons.html -->
+
+<table border="0" cellpadding="2" cellspacing="0" width="100%">
+<tbody><tr><td><font size="-1"><a href="javascript:CheckAll(true)">すべてを選択</a>&nbsp;-&nbsp;<a href="javascript:CheckAll(false)">すべての選択を解除</a></font></td>
+</tr></tbody></table>
+<!-- nbc_check_clear_all.html -->
+<table border="0" cellpadding="2" cellspacing="1" width="100%">
+<tbody><tr bgcolor="#dcdcdc">
+<td nowrap="nowrap" width="1%"><font size="-1">&nbsp;</font></td>
+  <td align="left" bgcolor="#faedac" nowrap="nowrap"><font size="-1"><a href="http://briefcase.yahoo.co.jp/bc/yamato39adu/lst?&amp;.dir=/9253&amp;.src=bc&amp;.view=l&amp;.sortBy=nd&amp;.begin=9999&amp;.order=&amp;.done=http%3a//briefcase.yahoo.co.jp/bc/yamato39adu/lst%3f%26.dir=/9253%26.src=bc%26.view=l"><img src="5_files/up.gif" alt="昇順" border="0"></a>&nbsp;<a href="http://briefcase.yahoo.co.jp/bc/yamato39adu/lst?&amp;.dir=/9253&amp;.src=bc&amp;.view=l&amp;.sortBy=nd&amp;.begin=9999&amp;.order=&amp;.done=http%3a//briefcase.yahoo.co.jp/bc/yamato39adu/lst%3f%26.dir=/9253%26.src=bc%26.view=l"><b>名前</b></a></font></td>
+  <td nowrap="nowrap" width="10%"><font size="-1"><b><a href="http://briefcase.yahoo.co.jp/bc/yamato39adu/lst?&amp;.dir=/9253&amp;.src=bc&amp;.view=l&amp;.sortBy=ta&amp;.begin=9999&amp;.order=&amp;.done=http%3a//briefcase.yahoo.co.jp/bc/yamato39adu/lst%3f%26.dir=/9253%26.src=bc%26.view=l">種類</a></b></font></td>
+  <td nowrap="nowrap" width="15%"><font size="-1"><b><a href="http://briefcase.yahoo.co.jp/bc/yamato39adu/lst?&amp;.dir=/9253&amp;.src=bc&amp;.view=l&amp;.sortBy=sd&amp;.begin=9999&amp;.order=&amp;.done=http%3a//briefcase.yahoo.co.jp/bc/yamato39adu/lst%3f%26.dir=/9253%26.src=bc%26.view=l">個数/サイズ</a></b></font></td>
+  <td nowrap="nowrap" width="15%"><font size="-1"><b><a href="http://briefcase.yahoo.co.jp/bc/yamato39adu/lst?&amp;.dir=/9253&amp;.src=bc&amp;.view=l&amp;.sortBy=ma&amp;.begin=9999&amp;.order=&amp;.done=http%3a//briefcase.yahoo.co.jp/bc/yamato39adu/lst%3f%26.dir=/9253%26.src=bc%26.view=l">最終変更日</a></b></font></td>
+  <td align="center" nowrap="nowrap" width="5%"><font size="-1"><b>編集</b></font></td>
+</tr>
+ 
+
+  <tr>
+<td nowrap="nowrap" valign="middle">
+
+  								<input name=".docs" value="3euc.c" type="checkbox">
+			                  <img src="5_files/sdoc.gif" alt="ファイル" border="0" height="16" hspace="2" width="12">
+              </td>
+  <td align="left" valign="middle">
+  <font size="-1">
+            	<a href="http://proxy.f3.ymdb.yahoofs.jp/bc/443e41fa_14ace/bc/9253/3euc.c?BCeV7aFBenhEhVz9">
+<b>3euc.c</b></a>
+        </font></td>
+          <td valign="middle"><font size="-1">.c</font></td>
+                      <td nowrap="nowrap" valign="middle"><font size="-1">0KB</font></td>
+        <td nowrap="nowrap" valign="middle"><font size="-1">2006年11月27日</font></td>
+          <td align="center" valign="middle">
+              <a href="http://edit.briefcase.yahoo.co.jp/edit/yamato39adu/modify_briefcase_doc?.dir=/9253&amp;.src=bc&amp;.dnm=3euc.c&amp;.done=http%3a//briefcase.yahoo.co.jp/bc/yamato39adu/lst%3f%26.dir=/9253%26.src=bc%26.view=l">
+        <img src="5_files/ed.gif" alt="編集" border="0" height="12" width="12"></a>
+            </td>
+        </tr>
+    <tr bgcolor="#eeeeee">
+<td nowrap="nowrap" valign="middle">
+
+  								<input name=".docs" value="5euc.txt" type="checkbox">
+			                  <img src="5_files/sdoc.gif" alt="ファイル" border="0" height="16" hspace="2" width="12">
+              </td>
+  <td align="left" valign="middle">
+  <font size="-1">
+            	<a href="http://proxy.f3.ymdb.yahoofs.jp/bc/443e41fa_14ace/bc/9253/5euc.txt?BCeV7aFBHD23UODh">
+<b>5euc.txt</b></a>
+        </font></td>
+          <td valign="middle"><font size="-1">.txt</font></td>
+                      <td nowrap="nowrap" valign="middle"><font size="-1">0KB</font></td>
+        <td nowrap="nowrap" valign="middle"><font size="-1">2006年11月27日</font></td>
+          <td align="center" valign="middle">
+              <a href="http://edit.briefcase.yahoo.co.jp/edit/yamato39adu/modify_briefcase_doc?.dir=/9253&amp;.src=bc&amp;.dnm=5euc.txt&amp;.done=http%3a//briefcase.yahoo.co.jp/bc/yamato39adu/lst%3f%26.dir=/9253%26.src=bc%26.view=l">
+        <img src="5_files/ed.gif" alt="編集" border="0" height="12" width="12"></a>
+            </td>
+        </tr>
+  </tbody></table>
+
+<table border="0" cellpadding="2" cellspacing="0" width="100%">
+<tbody><tr><td><font size="-1"><a href="javascript:CheckAll(true)">すべてを選択</a>&nbsp;-&nbsp;<a href="javascript:CheckAll(false)">すべての選択を解除</a></font></td>
+</tr></tbody></table>
+<!-- nbc_check_clear_all.html -->
+
+<table bgcolor="#ffffff" border="0" cellpadding="2" cellspacing="0" width="100%">
+<tbody>
+<tr bgcolor="#b6c7e5">
+<td bgcolor="#e0ddbc" valign="middle">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr>
+
+
+	<td width="66%">
+		<table border="0" cellpadding="2" cellspacing="0" width="100%"><tbody><tr>
+	
+															<td width="99%"><input name=".actionEmail" onclick="docs_text('メールで送るドキュメントまたはフォルダを少なくとも1つ選んでください。')" value="メール送信" src="5_files/bot_pt2.gif" alt="友だちに送る" border="0" height="24" type="image" width="115"></td>
+												</tr></tbody></table>
+	</td>
+
+
+											<td align="right" width="34%"><table border="0" cellpadding="2" cellspacing="0" width="67%">
+	<tbody><tr>
+				<td><input name=".actionMove" onclick="docs_text('移動するドキュメントまたはフォルダを少なくとも1つ選んでください。')" value="移動" src="5_files/sbot_mov.gif" alt="移動" border="0" height="20" type="image" width="35"></td>
+				<td><input name=".actionCopy" onclick="docs_text('コピーするドキュメントまたはフォルダを少なくとも1つ選んでください。')" value="コピー" src="5_files/sbot_cop.gif" alt="コピー" border="0" height="20" type="image" width="35"></td>
+										<td><input name=".actionDelete" onclick="docs_text('削除するドキュメントまたはフォルダを少なくとも1つ選んでください。.')" value="削除" src="5_files/sbot_del.gif" alt="削除" border="0" height="20" type="image" width="35"></td>
+				</tr></tbody></table>
+	</td>
+
+</tr></tbody></table>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+
+<!--  -->
+<!-- nbc_function_buttons.html -->
+
+<table bgcolor="#999999" border="0" cellpadding="1" cellspacing="0" width="100%">
+
+
+<tbody><tr><td>
+<table bgcolor="#ffffff" border="0" cellpadding="2" cellspacing="0" width="100%">
+<tbody><tr>
+<td align="left" nowrap="nowrap" width="70%"><font size="-1"> 2件中1 - 2件を表示
+				</font></td>
+<td align="right" nowrap="nowrap">
+&nbsp;
+</td></tr>
+</tbody></table>
+</td></tr>
+</tbody></table>
+
+
+<!-- nbc_show_file_count.html -->
+
+<table bgcolor="#ffffff" border="0" cellpadding="2" cellspacing="0" width="100%">
+<tbody><tr bgcolor="#dcdcdc">
+<td align="right"><font size="-1">1GB中1.09MBを使用（0％）</font></td></tr></tbody></table>
+</form>
+</td>
+
+</tr></tbody></table>
+
+
+
+<br>
+<table border="0" cellpadding="1" cellspacing="0" width="675">
+  <tbody><tr bgcolor="#dcdcdc"><td align="center" valign="middle">
+  <table bgcolor="#ffffcc" border="0" cellpadding="2" cellspacing="0" width="100%">
+  <tbody><tr><td align="center"><font size="-1"> ブックマークに登録して、すばやくアクセス&nbsp;<a href="http://briefcase.yahoo.co.jp/yamato39adu">http://briefcase.yahoo.co.jp/yamato39adu</a>&nbsp;友だちに知らせよう！</font></td></tr></tbody></table></td></tr></tbody></table>
+  </p><p>
+  <table border="0" cellpadding="0" cellspacing="0" width="675"><tbody><tr><td>
+</td></tr></tbody></table>
+<script language="javascript" src="5_files/mc.js">
+
+</script>
+
+<!-- nbc_bookmark_trough.html -->
+
+      		   	  </p><center>
+<hr noshade="noshade" size="1" width="675">
+<table width="675">
+	<tbody><tr>
+		<td align="center">
+<font helvetica="" size="-1"><a href="http://privacy.yahoo.co.jp/" target="_top">プライバシーの考え方</a> -
+			<a href="http://docs.yahoo.co.jp/docs/info/terms/" target="_top">利用規約</a>  - <a href="http://docs.yahoo.co.jp/info/advertising/">広告掲載について</a> -
+			<a href="http://docs.yahoo.co.jp/docs/info/guidelines/photos_briefcase.html" target="_top">ガイドライン</a> -
+<a href="http://help.yahoo.co.jp/help/jp/bc" target="_top">ヘルプ・お問い合わせ</a>
+<br>
+Copyright (C) 2006 Yahoo Japan Corporation. All Rights Reserved.</font>	  </td>
+	</tr>
+</tbody></table>
+</center>
+
+
+<!-- Footer.html -->
+	<!-- etime:0.09005 yntime:0.021610 -->
+<!-- Server: briefcase.yahoo.co.jp -->
+</center><!-- nbc_footer.html -->
+
+
+
+<!-- nbc_list.html -->
+<script language="javascript">
+if(window.yzq_p==null)document.write("<scr"+"ipt language=javascript src=http://ai.yimg.jp/bdv/yahoo/javascript/csc/20060824/lib2obf_b1.js></scr"+"ipt>");
+</script><script language="javascript" src="5_files/lib2obf_b1.js"></script><script language="javascript">
+if(window.yzq_p)yzq_p('P=keWeXspdV7nnjBu7RDxibgrF0pwoQUVrrloABeYE&T=13qn6lem9%2fX%3d1164684890%2fE%3d150716003%2fR%3djpbrief%2fK%3d5%2fV%3d1.1%2fW%3dJ%2fY%3djp%2fF%3d2029462459%2fS%3d1%2fJ%3d3B545DCA');
+if(window.yzq_s)yzq_s();
+</script><noscript><div style="position:absolute;"><img width=1
+height=1 alt=""
+src="http://b1.yahoo.co.jp/b?P=keWeXspdV7nnjBu7RDxibgrF0pwoQUVrrloABeYE&T=13tv0sjv3%2fX%3d1164684890%2fE%3d150716003%2fR%3djpbrief%2fK%3d5%2fV%3d3.1%2fW%3dJ%2fY%3djp%2fF%3d59764811%2fQ%3d-1%2fS%3d1%2fJ%3d3B545DCA"></div></noscript>
+<!-- pg102.photos.bbt.yahoo.co.jp compressed/chunked Tue Nov 28 12:34:50 JST 2006 --></body></html>

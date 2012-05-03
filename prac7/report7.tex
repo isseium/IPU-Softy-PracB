@@ -1,0 +1,176 @@
+\documentclass[a4j]{jarticle}
+\usepackage{verbatim}
+\usepackage{ascmac}
+\usepackage[dvips]{graphicx}
+
+\begin{document}
+
+\newcommand{\inc}[1]{
+\normalsize
+プログラムのソースと実行結果を以下に示す。
+\scriptsize
+\begin{itembox}[l]{ソース}
+ \verbatiminput{#1}
+\end{itembox}
+%\normalsize
+}
+\section{平均と分散}
+\inc{1.c}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac7] $./1
+x[0] : 1.54
+x[1] : 0.53
+x[2] : 0.93
+x[3] : 1.60
+x[4] : 2.84
+x[5] : 0.52
+x[6] : 2.11
+x[7] : 0.68
+x[8] : 1.48
+x[9] : 0.37
+AVE = 1.260000, V = 0.577920
+\end{verbatim}
+\end{itembox}
+
+\newpage
+
+\section{ベクトルの積}
+\inc{2.c}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac7] $./2
+Ax[1]=5.310000
+Ax[2]=7.140000
+Ax[3]=8.970000
+\end{verbatim}
+\end{itembox}
+
+\newpage
+
+\section{ベクトルの累乗}
+\inc{3.c}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac7] $./3
+0.247442 0.247609 0.252565 0.252384 
+0.252384 0.247442 0.247609 0.252565 
+0.252565 0.252384 0.247442 0.247609 
+0.247609 0.252565 0.252384 0.247442 
+\end{verbatim}
+\end{itembox}
+
+\newpage
+
+\section{ヤコビの反復法}
+\inc{4.c}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac7] $./4
+x[1] = 0.999999
+x[2] = 1.999995
+x[3] = 2.999995
+\end{verbatim}
+\end{itembox}
+
+\newpage
+
+\section{ヤコビ法とガウス-ザイデル法}
+\normalsize
+ヤコビ法では、解$y_i$を求める際に、すべての解$y_i$と前の解$y'_i$を必要と
+するため、プログラムで実現する場合多くのメモリ領域を必要とするが、ガウス-
+ザイデル法では一つの成分の計算が終わると、その成分を使うことで少ないメモリ領域で計算が可能となる。
+
+
+
+\section{逆順に出力}
+\inc{6.c}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac7] $./6
+a: orange
+b: egnaro
+\end{verbatim}
+\end{itembox}
+
+\newpage
+
+\section{大文字変換}
+\inc{7.c}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac7] $./7
+String: Apple
+Upper case: APPLE
+\end{verbatim}
+\end{itembox}
+
+\newpage
+
+\section{文字列出現回数}
+\inc{8.c}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac7] $./8 
+String A: abcdefg
+String B: cd
+The number of appearance: 1
+\end{verbatim}
+\end{itembox}
+
+\newpage
+
+\section{2進数を10進数へ変換}
+\inc{9.c}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac7] $./9
+4 digits binary data: 0101
+0101 is 5 in decimal.
+\end{verbatim}
+\end{itembox}
+
+\newpage
+
+\section{暗号解読}
+\inc{10.c}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac7] $cco ./10
+Input string :bzdrzq
+Answer: caesar
+\end{verbatim}
+\end{itembox}
+
+\section{文字列を扱う関数}
+\normalsize
+C言語で文字列を扱う関数で代表的なものを以下にまとめる。
+
+\begin{tabular}{|l|l|l|}
+\hline
+
+関数名 & 機能 & ヘッダファイル\\
+\hline
+getc & 指定したストリームから文字を取得する & stdio.h\\
+strcpy(a,b) & 文字配列aを文字配列bにコピーする & string.h\\
+strcmp(a,b) & 文字配列aと文字配列bを比較する & string.h\\
+strlen(a) & 文字列の長さを求める & string.h\\
+\hline
+\end{tabular}
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,25 @@
+/* 2.c :課題１と異なる部分のみ */
+/* int main() */
+int main()
+{
+  float t_quant; /* 求める所蔵量 */
+  int p0=0; /* 計算の基準のアイテム番号 */
+  int q; /* 調べたいアイテム番号 */
+  int i;  /* ループカウンタ */
+
+  init_buhin(); /* データを初期化 */
+
+  for(i=0;i<14;i++)
+    if(buhin[i].n_spart==0){    /* 子部品の有無 */
+      /* 必要量を求める */
+      q = i;
+      t_quant = get_q(p0, q);
+      
+      /* 結果表示 */
+      printf("Total quantity of %s is %f in %s.\n",
+             buhin[q].part_name, t_quant, buhin[p0].part_name);
+    }
+
+  return 0;
+}
+

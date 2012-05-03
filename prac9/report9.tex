@@ -1,0 +1,218 @@
+\documentclass[a4j]{jarticle}
+\usepackage{verbatim}
+\usepackage{ascmac}
+\usepackage[dvips]{graphicx}
+
+\begin{document}
+\newcommand{\inc}[1]{
+\footnotesize
+プログラムのソースと実行結果を以下に示す。
+\begin{itembox}[l]{ソース}
+ \verbatiminput{#1}
+\end{itembox}
+%\normalsize
+}
+
+
+\section{コマンドに対する引数}
+各空欄に対する答えと理由を以下に示す。
+\begin{enumerate}
+\item  4
+
+理由：argc にはコマンドに対する引数にコマンド名を加えた数が代入されるた
+      め。
+
+\item (argv[1])[1]
+
+理由：'p'は、第 1 引数の 2 文字目であるため、第 1 引数が格納されている 
+      argv[1] の 2 つ目の配列である (argv[1])[1] に'p'が格納されている 
+      。
+\item  argv[2]
+
+理由：''1.24''は、第 2 引数であるため、argv[2] に''1.24''が格納されてい
+      る。
+
+\item  '.'
+
+理由：(argv[3])は第 3 引数を示しており、その添字である [5] は、6文字目を
+      示している。よって''input.dat''の 6 文字目である '.'が格納されてい
+      る。
+\end{enumerate}
+
+
+\section{プログラム作成(1)}
+\inc{2.c}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac9] $./2 apple lemon orange pear
+apple: 5
+lemon: 5
+orange: 6
+pear: 4
+\end{verbatim}
+\end{itembox}
+
+\newpage
+
+\section{プログラム作成(2)}
+\inc{3.c}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac9] $./3 0.0 1 1.234 3.1415
+0.0 = 0 + 0.000000
+1 = 1 + 0.000000
+1.234 = 1 + 0.234000
+3.1415 = 3 + 0.141500
+\end{verbatim}
+\end{itembox}
+
+\newpage
+
+\section{プログラム作成(3)}
+\inc{4.c}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac9] $./4
+Input number: 1.2
+Input number: 2.2
+Input number: 1.7
+Input number: 1.1
+Input number: 0.7
+Input number: 0.0
+Input number: 1.9
+Input number: 1.0
+Input number: 1.3
+Input number: 2.3
+
+Interval | Frequency
+---------+---------
+[0,1)    | **
+[1,2)    | ******
+[2,3)    | **
+\end{verbatim}
+\end{itembox}
+
+\newpage
+
+\section{プログラム作成(4)}
+\inc{5.c}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac9] $./5 -k 42.195
+42.195 [km] = 26.208075 [mi]
+\end{verbatim}
+\end{itembox}
+
+\newpage
+
+\section{プログラム作成(5)}
+\inc{6.c}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac9] $./6 1.2 \* 0.5
+1.2 * 0.5 = 0.600000
+\end{verbatim}
+\end{itembox}
+
+
+\section{プログラム作成(6)}
+\inc{7.c}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac9] $./7 1f + b
+1f + b = 2a
+[~/report/softB/prac9] $./7 1f \* b
+1f * b = 155
+\end{verbatim}
+\end{itembox}
+
+\newpage
+
+\section{プログラム作成(7)}
+\footnotesize
+プログラムのソースと実行結果を以下に示す。
+\tiny
+\begin{itembox}[l]{ソース}
+ \verbatiminput{t8.c}
+\end{itembox}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac9] $./8
+0
+ftoa: 0.000
+[~/report/softB/prac9] $./8
+-10
+ftoa: -10.000
+[~/report/softB/prac9] $./8
+12.3
+ftoa: 12.300
+[~/report/softB/prac9] $./8
+3.14159
+ftoa: 3.141
+\end{verbatim}
+\end{itembox}
+
+\normalsize
+\newpage
+
+\section{小数点以下を操作する関数}
+関数rint(), ceil(), floor()の各仕様を表~\ref{tab:9}に示す。
+
+\begin{table}[!h]
+\begin{center}
+\begin{tabular}{|l|l|l|}
+\hline
+関数 &  機能\\
+\hline
+double rint(double x) & 小数点以下四捨五入\\
+&（ただし、$|rint(x)-x|=1/2$のときはxにもっとも近い偶数が指定される。）\\
+double ceil(double x) & 小数点以下切り捨て\\
+double floor(double x) & 小数点以下切り上げ\\
+\hline
+\end{tabular}
+\end{center}
+\caption{小数点以下を操作する関数}
+\label{tab:9}
+\end{table}
+
+\footnotesize
+プログラムのソースと実行結果を以下に示す。
+\tiny
+\begin{itembox}[l]{ソース}
+ \verbatiminput{9.c}
+\end{itembox}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac9] $cc -o 9 9.c -lm
+[~/report/softB/prac9] $./9
+rint(123.456789):	 123.000000
+rint(1234.567890):	 1235.000000
+own_rint(123.456789):	 123.000000
+own_rint(1234.567890):	 1235.000000
+ceil(123.456789):	 124.000000
+ceil(1234.567890):	 1235.000000
+own_ceil(123.456789):	 124.000000
+own_ceil(1234.567890):	 1235.000000
+floor(123.456789):	 123.000000
+floor(1234.567890):	 1234.000000
+own_floor(123.456789):	 123.000000
+own_floor(1234.567890):	 1234.000000
+ftoa: 1768.500
+\end{verbatim}
+\end{itembox}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,728 @@
+\documentclass[a4j]{jarticle}
+\usepackage{verbatim}
+\usepackage{ascmac}
+\usepackage[dvips]{graphicx}
+
+\begin{document}
+\newcommand{\inc}[1]{
+\footnotesize
+プログラムのソースと実行結果を以下に示す。
+\begin{itembox}[l]{ソース}
+ \verbatiminput{#1}
+\end{itembox}
+%\normalsize
+}
+
+\newcommand{\inctiny}[1]{
+\tiny
+プログラムのソースと実行結果を以下に示す。
+\begin{itembox}[l]{ソース}
+ \verbatiminput{#1}
+\end{itembox}
+%\normalsize
+}
+
+\newcommand{\incnext}[1]{
+\footnotesize
+プログラムのソースと実行結果を次のページに示す。
+\begin{itembox}[l]{ソース}
+ \verbatiminput{#1}
+\end{itembox}
+%\normalsize
+}
+
+\section{プログラム作成(1)}
+\inc{1.c}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac12] $./1
+p1 = (1,2)
+p2 = (5,4)
+p3 = (-2,3)
+\end{verbatim}
+\end{itembox}
+
+\newpage
+
+\section{プログラム作成(2)}
+\inc{2.c}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac12] $./2
+S = 3.500000
+\end{verbatim}
+\end{itembox}
+
+\newpage
+
+\section{プログラム作成(3)}
+\inc{3.c}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac12] $./3
+2.00+3.00i
+4.00-1.00i
+\end{verbatim}
+\end{itembox}
+
+\newpage
+
+\section{プログラム作成(4)}
+\footnotesize
+プログラムのソースと実行結果を以下に示す。
+\begin{itembox}[l]{ソース}
+\begin{verbatim}
+/* 4.c */
+#include <stdio.h>
+#include <math.h>
+
+struct orthogonal_complex{
+  double r;                     /* 実部 */
+  double i;                     /* 虚部 */
+};
+
+struct orthogonal_complex define_orthogonal_complex(double x, double y)
+{
+  struct orthogonal_complex c;
+
+  c.r = x;
+  c.i = y;
+
+  return c;
+}
+
+void put_orthogonal_complex(struct orthogonal_complex c)
+{
+  printf("%.2f%+.2fi\n",c.r,c.i);
+}
+
+struct orthogonal_complex orthogonal_complex_add
+	(struct orthogonal_complex z1,struct orthogonal_complex z2)
+{
+  struct orthogonal_complex z;
+
+  z.r = z1.r + z2.r;
+  z.i = z1.i + z2.i;
+
+  return z;
+}
+
+struct orthogonal_complex orthogonal_complex_sub
+	(struct orthogonal_complex z1,struct orthogonal_complex z2)
+{
+  struct orthogonal_complex z;
+
+  z.r = z1.r - z2.r;
+  z.i = z1.i - z2.i;
+
+  return z;
+}
+
+struct orthogonal_complex orthogonal_complex_mul
+	(struct orthogonal_complex z1,struct orthogonal_complex z2)
+{
+  struct orthogonal_complex z;
+
+  z.r = (z1.r * z2.r) - (z1.i * z2.i);
+  z.i = (z1.r * z2.i) + (z1.i * z2.r);
+
+  return z;
+}
+
+\end{verbatim}
+\end{itembox}
+
+\begin{itembox}[l]{ソース}
+\begin{verbatim}
+struct orthogonal_complex orthogonal_complex_div
+	(struct orthogonal_complex z1,struct orthogonal_complex z2)
+{
+  struct orthogonal_complex z;
+
+  z.r = ((z1.r * z2.r)+(z1.i * z2.i)) / ( pow(z2.r,2)+pow(z2.i,2));
+  z.i = ((z1.i * z2.r)-(z1.r * z2.i)) / ( pow(z2.r,2)+pow(z2.i,2));
+
+  return z;
+}
+
+int main()
+{
+  struct orthogonal_complex z1,z2,z;
+
+  z1 = define_orthogonal_complex(2.0,3.0);
+  z2 = define_orthogonal_complex(4.0,-1.0);
+
+  z = orthogonal_complex_add(z1,z2);
+  printf("z1 + z2 = ");
+  put_orthogonal_complex(z);
+
+  z = orthogonal_complex_sub(z1,z2);
+  printf("z1 - z2 = ");
+  put_orthogonal_complex(z);
+
+  z = orthogonal_complex_mul(z1,z2);
+  printf("z1 * z2 = ");
+  put_orthogonal_complex(z);
+
+  z = orthogonal_complex_div(z1,z2);
+  printf("z1 / z2 = ");
+  put_orthogonal_complex(z);
+
+  return 0;
+}
+
+\end{verbatim}
+\end{itembox}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac12] $./4
+z1 + z2 = 6.00+2.00i
+z1 + z2 = -2.00+4.00i
+z1 + z2 = 11.00+10.00i
+z1 + z2 = 0.29+0.82i
+\end{verbatim}
+\end{itembox}
+
+\newpage
+
+\section{プログラム作成(5)}
+\inc{5.c}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+----------Status----------
+life: 200
+magic: 100
+power: 10
+sleep: 1
+confuse: 0
+paralysis: 0
+poison: 0
+
+----------Status----------
+life: 190
+magic: 100
+power: 10
+sleep: 0
+confuse: 0
+paralysis: 0
+poison: 1
+
+----------Status----------
+life: 185
+magic: 100
+power: 9
+sleep: 0
+confuse: 0
+paralysis: 0
+poison: 1
+
+----------Status----------
+life: 180
+magic: 100
+power: 8
+sleep: 0
+confuse: 0
+paralysis: 0
+poison: 1
+\end{verbatim}
+\end{itembox}
+
+\newpage
+
+\section{プログラム作成(6)}
+\footnotesize
+プログラムのソースと実行結果を以下に示す。
+\begin{itembox}[l]{ソース}
+\begin{verbatim}
+#include <stdio.h>
+#define N 100
+
+union op_1{
+  float a[N][N];
+  float x[N][N];
+};
+
+union op_2{
+  float b[N][N];
+  float y[N][N];
+};
+
+void add(float matrix1[N][N], float matrix2[N][N], float ans[N][N], int n)
+{
+  int i,j;
+
+  for(i=0;i<n;i++)
+    for(j=0;j<n;j++)
+      ans[i][j] = matrix1[i][j] + matrix2[i][j];
+}
+
+void multi(float matrix1[N][N], float matrix2[N][N], float ans[N][N], int n)
+{
+  int i,j,k;
+  float tmp;
+  
+  for(i=0;i<n;i++)
+    for(j=0;j<n;j++){
+      tmp = 0.0;
+      for(k=0;k<n;k++){
+        tmp += matrix1[i][k] * matrix2[k][j];
+      }
+      ans[i][j] = tmp;
+    }
+}
+
+int main()
+{
+  union op_1 op1;
+  union op_2 op2;
+  float ans[N][N];
+  int i,j,n;
+
+  printf("Input dimension of the matrix : ");
+  scanf("%d",&n);
+
+  /* A を読み込む */
+  for(i=0;i<n;i++)
+    for(j=0;j<n;j++){
+      printf("Input A %d, %d : ",i+1,j+1);
+      scanf("%f",&op1.a[i][j]);
+    }
+  
+  /* B を読み込む */
+  for(i=0;i<n;i++){
+    for(j=0;j<n;j++){
+      printf("Input B %d, %d : ",i+1,j+1);
+      scanf("%f",&op2.b[i][j]);
+    }
+\end{verbatim}
+\end{itembox}
+
+\begin{itembox}[l]{ソース}
+\begin{verbatim}
+
+  /* 加算 */
+  add(op1.a,op2.b,ans,n);
+    
+  /* 表示 */
+  for(i=0;i<n;i++){
+    for(j=0;j<n;j++)
+      printf("%f ",ans[i][j]);
+    printf("\n");
+  }
+  
+  /* X を読み込む */
+  for(i=0;i<n;i++)
+    for(j=0;j<n;j++){
+      printf("Input X %d, %d : ",i+1,j+1);
+      scanf("%f",&op1.a[i][j]);
+    }
+  
+  /* Y を読み込む */
+  for(i=0;i<n;i++)
+    for(j=0;j<n;j++){
+      printf("Input Y %d, %d : ",i+1,j+1);
+      scanf("%f",&op2.b[i][j]);
+    }
+  
+  /* 乗算 */
+  multi(op1.x,op2.y,ans,n);
+  
+  /* 表示 */
+  for(i=0;i<n;i++){
+    for(j=0;j<n;j++)
+      printf("%f ",ans[i][j]);
+    printf("\n");
+  }
+  
+  return 0;
+}
+\end{verbatim}
+\end{itembox}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac12] $./6
+Input dimension of the matrix : 3
+Input A 1, 1 : 1
+Input A 1, 2 : 2
+Input A 1, 3 : 3
+Input A 2, 1 : 4
+Input A 2, 2 : 5
+Input A 2, 3 : 6
+Input A 3, 1 : 7
+Input A 3, 2 : 8
+Input A 3, 3 : 9
+Input B 1, 1 : 4
+Input B 1, 2 : 5
+Input B 1, 3 : 6
+Input B 2, 1 : 7
+Input B 2, 2 : 8
+Input B 2, 3 : 9
+Input B 3, 1 : 1
+Input B 3, 2 : 2
+Input B 3, 3 : 3
+5.000000 7.000000 9.000000 
+11.000000 13.000000 15.000000 
+8.000000 10.000000 12.000000 
+Input X 1, 1 : 1
+Input X 1, 2 : 2
+Input X 1, 3 : 3
+Input X 2, 1 : 4
+Input X 2, 2 : 5
+Input X 2, 3 : 6
+Input X 3, 1 : 7
+Input X 3, 2 : 8
+Input X 3, 3 : 9
+Input Y 1, 1 : 2
+Input Y 1, 2 : 3
+Input Y 1, 3 : 4
+Input Y 2, 1 : 5
+Input Y 2, 2 : 6
+Input Y 2, 3 : 7
+Input Y 3, 1 : 8
+Input Y 3, 2 : 9
+Input Y 3, 3 : 1
+36.000000 42.000000 21.000000 
+81.000000 96.000000 57.000000 
+126.000000 150.000000 93.000000 
+\end{verbatim}
+\end{itembox}
+
+\newpage
+
+\section{プログラム作成(7)}
+\inc{7.c}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac12] $./7
+8.00(cos(0.666667pi) + i*sin(0.666667pi))
+2.00(cos(0.333333pi) + i*sin(0.333333pi))
+\end{verbatim}
+\end{itembox}
+
+\section{プログラム作成(8)}
+\incnext{8.c}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac12] $./8
+1.00-0.00i
+\end{verbatim}
+\end{itembox}
+
+\section{プログラム作成(9)}
+プログラムのソースと実行結果を以下に示す。
+\begin{itembox}[l]{ソース}
+\begin{verbatim}
+/* 9.c */
+#include <stdio.h>
+#include <math.h>
+#define ORTHOGONAL 1
+#define POLAR 2
+
+struct orthogonal_complex{
+  double r;
+  double i;
+};
+
+struct polar_complex{
+  double r;
+  double theta;
+};
+
+/* 抽象的な複素数 */
+struct complex {
+  int form;/* 代入されている形式を示す識別子 */
+  union common_complex{ /* 両形式の複素数を代入可能な共用体 */
+    struct orthogonal_complex orthogonal_value;
+    struct polar_complex polar_value;
+  }value;
+};
+
+/* 直行形式を定義 */
+struct complex define_complex_by_orthogonal(double r, double i)
+{
+  struct complex z;
+  
+  z.form = ORTHOGONAL;
+  z.value.orthogonal_value.r = r;
+  z.value.orthogonal_value.i = i;
+  
+  return z;
+}
+
+/* 極形式を定義 */
+struct complex define_complex_by_polar(double r, double theta)
+{
+  struct complex z;
+  
+  z.form = POLAR;
+  z.value.polar_value.r = r;
+  z.value.polar_value.theta = theta;  
+
+  return z;
+}
+
+\end{verbatim}
+\end{itembox}
+\begin{itembox}[l]{ソース}
+\begin{verbatim}
+/* 直交形式を極形式に変換 */
+struct complex polar2orthogonal(struct complex z)
+{
+  struct complex ans;
+  
+  if(z.form == ORTHOGONAL) return z;
+  
+  ans.form = ORTHOGONAL;
+  ans.value.orthogonal_value.r = z.value.polar_value.r * cos(z.value.polar_value.theta);
+  ans.value.orthogonal_value.i = z.value.polar_value.r * sin(z.value.polar_value.theta);
+  
+  return ans;
+}
+
+/* 極形式を直交形式に変換 */
+struct complex orthogonal2polar(struct complex z)
+{
+  struct complex ans;
+  
+  if(z.form == POLAR)
+    return z;
+  
+  ans.form = POLAR;
+  ans.value.polar_value.r = sqrt(pow(z.value.orthogonal_value.r,2) 
+	+ pow(z.value.orthogonal_value.i,2));
+  ans.value.polar_value.theta = atan(z.value.orthogonal_value.i / z.value.orthogonal_value.r);
+  
+  return ans;
+}
+
+struct complex complex_add(struct complex z1, struct complex z2)
+{
+  /* 形式を直交形式に変換 */
+  z1 = polar2orthogonal(z1);
+  z2 = polar2orthogonal(z2);
+  
+  /* 加算した結果を返す */
+  return define_complex_by_orthogonal(z1.value.orthogonal_value.r + z2.value.orthogonal_value.r
+        , z1.value.orthogonal_value.i + z2.value.orthogonal_value.i);
+}
+
+struct complex complex_sub(struct complex z1, struct complex z2)
+{
+  /* 形式を直交形式に変換 */
+  z1 = polar2orthogonal(z1);
+  z2 = polar2orthogonal(z2);
+  
+  /* 減算した結果を返す */
+  return define_complex_by_orthogonal(z1.value.orthogonal_value.r -
+	z2.value.orthogonal_value.r
+        , z1.value.orthogonal_value.i - z2.value.orthogonal_value.i);
+}
+
+struct complex complex_mul(struct complex z1, struct complex z2)
+{
+  /* 形式を極形式に変換 */
+  z1 = orthogonal2polar(z1);
+  z2 = orthogonal2polar(z2);
+  
+  /* 極形式で乗算し、結果を直交形式で返す */
+  return polar2orthogonal(define_complex_by_polar(z1.value.polar_value.r *
+        z2.value.polar_value.r, z1.value.polar_value.theta + z2.value.polar_value.theta));
+}
+
+\end{verbatim}
+\end{itembox}
+\begin{itembox}[l]{ソース}
+\begin{verbatim}
+
+struct complex complex_div(struct complex z1, struct complex z2)
+{
+  /* 形式を極形式に変換 */
+  z1 = orthogonal2polar(z1);
+  z2 = orthogonal2polar(z2);
+  
+  /* 極形式で除算し、結果を直交形式で返す */
+  return polar2orthogonal(define_complex_by_polar(z1.value.polar_value.r /
+        z2.value.polar_value.r, z1.value.polar_value.theta - z2.value.polar_value.theta));
+}
+
+/* 直交形式で出力 */
+void put_complex_by_orthogonal(struct complex z)
+{
+  /* 直交形式に変換 */
+  z = polar2orthogonal(z);
+  printf("%.2f%+.2fi\n", z.value.orthogonal_value.r, z.value.orthogonal_value.i);
+}
+
+/* 極形式で出力 */
+void put_complex_by_polar(struct complex z)
+{
+  /* 極形式に変換 */
+  z = orthogonal2polar(z);  	
+  printf("%.2f(cos(%fpi) + i*sin(%fpi))\n", z.value.polar_value.r,
+	 "%z.value.polar_value.theta
+       / M_PI, z.value.polar_value.theta / M_PI);
+}
+
+int main()
+{
+  struct complex z1,z2,z3,z4,z5,ans;
+  int i;
+  
+  /* 初期化 */
+  z1 = define_complex_by_orthogonal(1.732,1.0);
+  z2 = define_complex_by_polar(1.0,M_PI/6);
+  z3 = define_complex_by_orthogonal(2.0,3.464);
+  z4 = define_complex_by_polar(2.0,M_PI/3);
+  z5 = define_complex_by_orthogonal(2.0,1.0);
+
+  ans = complex_add(complex_div(complex_sub(complex_mul(z1,z2),z3),z4),z5);  /* 計算 */
+
+  put_complex_by_orthogonal(ans);  /* 直交形式で表示 */
+  put_complex_by_polar(ans);  /* 極形式で表示 */
+
+  return 0;
+}
+\end{verbatim}
+\end{itembox}
+
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac12] $./9
+3.00+1.00i
+3.16(cos(0.102413pi) + i*sin(0.102413pi))
+\end{verbatim}
+\end{itembox}
+
+\newpage
+
+\section{プログラム作成(10)}
+プログラムのソースと実行結果を以下に示す。
+\begin{itembox}[l]{ソース}
+\begin{verbatim}
+/* 10.c */
+#include <stdio.h>
+
+struct reg {
+  unsigned int a_reg: 8;
+  unsigned int b_reg: 8;
+  unsigned int c_reg: 8;
+  unsigned int zero: 1;
+  unsigned int carry: 1;
+};
+
+void add(struct reg *r)
+{
+  r->c_reg = r->a_reg + r->b_reg; /* 足し算 */
+
+  /* zero フラグ */
+  if(r->c_reg == 0)
+    r->zero = 1;
+  else
+    r->zero = 0;
+
+  /* carry フラグ */
+  if(r->c_reg < r->a_reg || r->c_reg < r->b_reg)
+    r->carry = 1;
+  else
+    r->carry = 0;
+}
+
+void sub(struct reg *r)
+{
+  r->c_reg = r->a_reg - r->b_reg; /* 減算 */
+
+  /* zero フラグ */
+  if(r->c_reg == 0)
+    r->zero = 1;
+  else
+    r->zero = 0;
+
+  /* carry フラグ */
+  if(r->c_reg > r->a_reg)
+    r->carry = 1;
+  else
+    r->carry = 0;
+}
+
+int main()
+{
+  struct reg r;
+  int a,b,type;
+  char ope[2] = {'+','-'};  
+
+  printf("a_reg : ");
+  scanf("%d",&a);
+  printf("b_reg : ");
+  scanf("%d",&b);
+
+  r.a_reg = a;
+  r.b_reg = b;
+
+  printf("Calc Type [1:add 2:sub] :");
+  scanf("%d",&type);
+\end{verbatim}
+\end{itembox}
+
+\begin{itembox}[l]{ソース}
+\begin{verbatim}
+  if(type==1)
+    add(&r);
+  else if(type==2)
+    sub(&r);
+  else{
+    printf("Invalid type\n");
+    return -1;
+  }
+
+  printf("\n%d %c %d = %d  (ZERO: %d, Carry: %d)\n",
+         r.a_reg, ope[type-1], r.b_reg, r.c_reg,r.zero,r.carry);
+
+  return 0;
+}
+\end{verbatim}
+\end{itembox}
+
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac12] $./10
+a_reg : 128
+b_reg : 16
+Calc Type [1:add 2:sub] :1
+
+128 + 16 = 144  (ZERO: 0, Carry: 0)
+[~/report/softB/prac12] $./10
+a_reg : 128
+b_reg : 16
+Calc Type [1:add 2:sub] :2
+
+128 - 16 = 112  (ZERO: 0, Carry: 0)
+[~/report/softB/prac12] $./10
+a_reg : 128
+b_reg : 128
+Calc Type [1:add 2:sub] :1
+
+128 + 128 = 0  (ZERO: 1, Carry: 1)
+[~/report/softB/prac12] $./10
+a_reg : 128
+b_reg : 128
+Calc Type [1:add 2:sub] :2
+
+128 - 128 = 0  (ZERO: 1, Carry: 0)
+\end{verbatim}
+\end{itembox}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

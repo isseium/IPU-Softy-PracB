@@ -1,0 +1,294 @@
+\documentclass[a4j]{jarticle}
+
+\usepackage{ascmac}
+
+\begin{document}
+
+\section{’Ê£’¹ç’Âå’Æþ’±é’»»’»Ò}
+’ÌÜ’»Ø’¤»’¥×’¥í’¥°’¥é’¥Þ’¡¼\cite{mezase}’¤ÎC’¸À’¸ì’¤Î’Ê£’¹ç’Âå’Æþ’±é’»»’»Ò’¤Î’¥Ú’¡¼’¥¸’¤Ë’¤è’¤ë’¤È’¡¢’¼¡’¤Î’É½’¤Ë’¤Þ’¤È’¤á’¤ë’¤³’¤È’¤¬’¤Ç’¤­’¤ë’¡£
+
+\begin{tabular}{c|l|l}
+’Ê£’¹ç’Âå’Æþ’±é’»»’»Ò & ’°Õ’Ì£ & ’ÄÌ’¾ï’¤Î’±é’»»’»Ò’¤Ç’¤Î’µ­’½Ò\\
+\hline
+\hline
+ a += b& a’¤Ëb’¤ò’²Ã’¤¨’¤¿’ÃÍ’¤òa’¤Ë’Âå’Æþ’¤¹’¤ë & a=a+b\\
+ a -= b& a’¤«’¤éb’¤ò’°ú’¤¤’¤¿’ÃÍ’¤òa’¤Ë’Âå’Æþ’¤¹’¤ë & a=a-b\\
+ a *= b& a’¤Èb’¤ò’¾è’¤¸’¤¿’ÃÍ’¤òa’¤Ë’Âå’Æþ’¤¹’¤ë & a=a*b\\
+ a /= b& a’¡àb’¤òa’¤Ë’Âå’Æþ’¤¹’¤ë & a=a/b\\
+ a \verb!%!= b & a’¡àb’¤Î’Í¾’¤ê’¤òa’¤Ë’Âå’Æþ’¤¹’¤ë & a=a\verb!%!b\\
+\end{tabular}
+
+\section{’ÏÂ’¤ò’µá’¤á’¤ë’¥×’¥í’¥°’¥é’¥à}
+’¥×’¥í’¥°’¥é’¥à’¤Î’¥½’¡¼’¥¹’¤È’¼Â’¹Ô’·ë’²Ì’¤ò’°Ê’²¼’¤Ë’¼¨’¤¹’¡£
+\footnotesize
+\begin{itembox}[l]{’¥½’¡¼’¥¹}
+\begin{verbatim}
+/* 2.c */
+#include <stdio.h>
+
+int main()
+{
+  int a, b;
+
+  printf("a: ");
+  scanf("%d",&a);
+
+  printf("b: ");
+  scanf("%d", &b);
+
+  printf(" a = %d, b = %d\n", a, b);
+  printf(" a + b = %d\n", a + b);
+
+  return 0;
+}
+\end{verbatim}
+\end{itembox}
+
+\begin{itembox}[l]{’¼Â’¹Ô’·ë’²Ì}
+\begin{verbatim}
+[~/report/softB/prac2] $cc -o 2 2.c
+[~/report/softB/prac2] $./2 
+a: 5
+b: 7
+ a = 5, b = 7
+ a + b = 12
+\end{verbatim}
+\end{itembox}
+
+
+\newpage
+\normalsize
+
+\section{’¾¦’¤È’Í¾’¤ò’µá’¤á’¤ë’¥×’¥í’¥°’¥é’¥à}
+’¥×’¥í’¥°’¥é’¥à’¤Î’¥½’¡¼’¥¹’¤È’¼Â’¹Ô’·ë’²Ì’¤ò’°Ê’²¼’¤Ë’¼¨’¤¹’¡£
+\footnotesize
+\begin{itembox}[l]{’¥½’¡¼’¥¹}
+\begin{verbatim}
+/* 3.c */
+#include <stdio.h>
+int main()
+{
+  int a, b;
+
+  printf("a: ");
+  scanf("%d",&a);
+
+  printf("b: ");
+  scanf("%d", &b);
+
+  printf(" a = %d, b = %d\n", a, b);
+  if ( b != 0 )                 /* 0 ’¤Ç’³ä’¤ë’¤È’¤¤’¤¦’¥¨’¥é’¡¼’¤ò’ËÉ’»ß */
+    printf(" a / b = %d ... %d\n", a / b, a % b);
+  else
+    printf("0 ’¤Ç’¤Ï’³ä’¤ì’¤Þ’¤»’¤ó\n");
+    
+  return 0;
+}
+\end{verbatim}
+\end{itembox}
+
+\begin{itembox}[l]{’¼Â’¹Ô’·ë’²Ì}
+\begin{verbatim}
+[~/report/softB/prac2] $cc -o 3 3.c
+[~/report/softB/prac2] $./3 
+a: 12345
+b: 9
+ a = 12345, b = 9
+ a / b = 1371 ... 6
+
+\end{verbatim}
+\end{itembox}
+
+\newpage
+\normalsize
+
+\section{’Å¸’³«’¤ò’¹Ô’¤¦’¥×’¥í’¥°’¥é’¥à}
+’¥×’¥í’¥°’¥é’¥à’¤Î’¥½’¡¼’¥¹’¤È’¼Â’¹Ô’·ë’²Ì’¤ò’°Ê’²¼’¤Ë’¼¨’¤¹’¡£
+\footnotesize
+\begin{itembox}[l]{’¥½’¡¼’¥¹}
+\begin{verbatim}
+/* 4.c */
+#include <stdio.h>
+
+int main()
+{
+  int a, b, c, d;
+
+  printf("(ax+b)(cx+d)\n");
+
+  printf("a: ");
+  scanf("%d",&a);
+
+  printf("b: ");
+  scanf("%d", &b);
+
+  printf("c: ");
+  scanf("%d",&c);
+
+  printf("d: ");
+  scanf("%d", &d);
+
+
+  printf(" (%d)*x*x+(%d)*x+(%d)\n",a*c, a*d+b*c, b*d);
+
+  return 0;
+}
+\end{verbatim}
+\end{itembox}
+
+\begin{itembox}[l]{’¼Â’¹Ô’·ë’²Ì}
+\begin{verbatim}
+[~/report/softB/prac2] $cc -o 4 4.c
+[~/report/softB/prac2] $./4
+(ax+b)(cx+d)
+a: 1
+b: -5
+c: 1
+d: 3
+ (1)*x*x+(-2)*x+(-15)
+\end{verbatim}
+\end{itembox}
+
+\newpage
+\normalsize
+
+\section{’£²’¼¡’´Ø’¿ô’¤Î’²ò’¤ò’µá’¤á’¤ë’¥×’¥í’¥°’¥é’¥à}
+’¥×’¥í’¥°’¥é’¥à’¤Î’¥½’¡¼’¥¹’¤È’¼Â’¹Ô’·ë’²Ì’¤ò’°Ê’²¼’¤Ë’¼¨’¤¹’¡£
+\footnotesize
+\begin{itembox}[l]{’¥½’¡¼’¥¹}
+\begin{verbatim}
+/* 5.c */
+#include <stdio.h>
+
+int main()
+{
+  int a, b, c, x, y;
+
+  printf("a: ");
+  scanf("%d",&a);
+
+  printf("b: ");
+  scanf("%d", &b);
+
+  printf("c: ");
+  scanf("%d",&c);
+
+  printf(" y = ax*x + bx + c = (%d)x*x + (%d)x + (%d)\n", a, b, c);
+
+  printf("x: ");
+  scanf("%d", &x);
+
+  /* y ’¤ò’µá’¤á’¤ë */
+  y =  a*x*x + b*x + c;
+  
+  printf(" y = %d, if x = %d.\n", y, x);
+
+  return 0;
+}
+\end{verbatim}
+\end{itembox}
+
+\begin{itembox}[l]{’¼Â’¹Ô’·ë’²Ì}
+\begin{verbatim}
+[~/report/softB/prac2] $ ./a.out 
+a: -1
+b: 6
+c: -4
+ y = ax*x + bx + c = (-1)x*x + (6)x + (-4)
+x: 3
+ y = 5, if x = 3.
+\end{verbatim}
+\end{itembox}
+
+\newpage
+
+\normalsize
+\section{’¾ò’·ï’¼°}
+\begin{itemize}
+\item ’¾ò’·ï’¼°1: \verb!((a >= 2 || b == 1) && c > 0)!\\
+a  \textgreater= 2 ’¤Ï’µ¶’¡¢b == 1 ’¤Ï’¿¿’¤Ç’¤¢’¤ê’¡¢’¤³’¤Î’ÏÀ’Íý’ÏÂ’¤Ï’¿¿’¤È’¤Ê’¤ë’¡£
+
+’¼¡’¤Ë c  \textgreater 0 ’¤Ï’¿¿’¤Ç’¤¢’¤ê’¡¢ \verb!(a >= 2 || b == 1)!’¤â’¿¿’¤Ç’¤¢’¤ë’¤«’¤é’ÏÀ’Íý’ÀÑ’¤Ï
+      ’¿¿’¤È’¤Ê’¤ë’¡£
+
+’¤¹’¤Ê’¤ï’¤Á’¡¢’¾ò’·ï’¼°1 ’¤Ï’¿¿’¤Ç’¤¢’¤ë’¡£
+
+\item ’¾ò’·ï’¼°2: \verb!(a >= 2 || b == 1 && c > 0)!\\
+b == 1 ’¤È c \textgreater 0 ’¤Ï’¤½’¤ì’¤¾’¤ì’¿¿’¤Ç’¤¢’¤ê’¡¢’¤³’¤Î’ÏÀ’Íý’ÀÑ’¤Ï’¿¿’¤È’¤Ê’¤ë’¡£
+
+’¼¡’¤Ë a  \textgreater= 2 ’¤Ï’¿¿’¤Ç’¤¢’¤ê’¡¢\verb!b == 1 && c > 0! ’¤â’¿¿’¤Ç’¤¢’¤ë’¤«
+      ’¤é’ÏÀ’Íý’ÏÂ’¤Ï’¿¿’¤È’¤Ê’¤ë’¡£
+
+’¤¹’¤ï’¤ï’¤Á’¡¢’¾ò’·ï’¼°2 ’¤Ï’¿¿’¤Ç’¤¢’¤ë’¡£  
+
+\item ’¾ò’·ï’¼°3: \verb+((a >= 2 || b == 1 && c > 0) != 0)+\\
+’¾ò’·ï’¼°2 ’¤è’¤ê’¡¢ \verb!(a >= 2 || b == 1 && c > 0)! ’¤Ï’¿¿’¤Ç’¤¢’¤ë’¤«’¤é’¡¢’¾ò’·ï’¼°
+      3 ’¤Ï’¿¿’¤È’¤Ê’¤ë’¡£
+
+\end{itemize}
+
+\section{’²Ý’Âê6 ’¤Î’³Î’Ç§}
+’¥×’¥í’¥°’¥é’¥à’¤Î’¥½’¡¼’¥¹’¤È’¼Â’¹Ô’·ë’²Ì’¤ò’°Ê’²¼’¤Ë’¼¨’¤¹’¡£
+\footnotesize
+\begin{itembox}[l]{’¥½’¡¼’¥¹}
+\begin{verbatim}
+/* 7.c */
+#include <stdio.h>
+
+int main()
+{
+  int a=1, b=1, c=1;
+
+  printf("1 : %d\n",((a >= 2 || b == 1) && c > 0));
+  printf("2 : %d\n",(a >= 2 || b == 1 && c > 0));
+  printf("3 : %d\n",((a >= 2 || b == 1 && c > 0) != 0));s
+
+  return 0;
+}
+\end{verbatim}
+\end{itembox}
+
+\begin{itembox}[l]{’¼Â’¹Ô’·ë’²Ì}
+\begin{verbatim}
+[~/report/softB/prac2] $cc -o 7 7.c
+[~/report/softB/prac2] $./7
+1 : 1
+2 : 1
+3 : 1
+\end{verbatim}
+\end{itembox}
+
+\normalsize
+
+C’¸À’¸ì’¤Ç’¤Ï’¡¢’±é’»»’»Ò’¤ò’ÍÑ’¤¤’¤Æ’É¾’²Á’¤µ’¤ì’¤ë’¼°’¤Î’ÃÍ’¤Î’µ¶’¤È’¿¿’¤Ï’¡¢’¤½’¤ì’¤¾’¤ì 0 ’¤È ’Èó 0 ’¤Ç
+’È½’ÃÇ’¤µ’¤ì’¤Æ’¤¤’¤ë’¡£
+
+’¤¹’¤Ê’¤ï’¤Á’½Ð’ÎÏ’¤·’¤¿’ÃÍ’¤¬’¡¢0 ’°Ê’³° ’¤Ç’¤¢’¤ì’¤Ð’¿¿’¡¢0 ’¤Ç’¤¢’¤ì’¤Ð’µ¶’¤È’¤¤’¤¦’¤³’¤È’¤Ç’¤¢’¤ë’¡£
+
+’¤³’¤Î’¥×’¥í’¥°’¥é’¥à’¤Î’½Ð’ÎÏ’·ë’²Ì’¤Ï’¤¹’¤Ù’¤Æ 0 ’°Ê’³°’¤Ç’¤¢’¤ë’¤¿’¤á ’¾ò’·ï 1 ’¤«’¤é 3 ’¤Ï’¤¹’¤Ù’¤Æ’¿¿’¤Ç’¤¢
+’¤ë’¤È’¸À’¤¨’¤ë’¡£
+
+\newpage
+\section{’²Ý’Âê6 ’¤¬’°ì’Äê’¾ò’·ï’¤Ë’¤Ê’¤ë’ÈÏ’°Ï}
+\begin{itemize}
+\item ’¾ò’·ï’¼°1, 2 ’¤¬’¶¦’¤Ë’¿¿\\
+b = 1, c $>$ 0 (A’¤Ï’Ç¤’°Õ)\\
+’¤Þ’¤¿’¤Ï a $\ge$ 2, b = 0, c = 1
+\item ’¾ò’·ï’¼°1 ’¤¬’¿¿, 2 ’¤¬’µ¶\\
+’¤Ê’¤·
+\item ’¾ò’·ï’¼°1 ’¤¬’µ¶, 2 ’¤¬’¿¿\\
+a $\ge$2, c $\le$0 (B’¤Ï’Ç¤’°Õ)\\
+\item ’¾ò’·ï’¼°1, 2 ’¤¬’¶¦’¤Ë’µ¶\\ 
+a $<$ 2, b $\ne$ 1 , c $\le$ 0\\
+’¤Þ’¤¿’¤Ï a $<$ 2, b $\ne$ 1, c $>$ 0\\
+’¤Þ’¤¿’¤Ï a $<$ 2, b = 1, c $\le$ 0 
+\end{itemize}
+
+\begin{thebibliography}{9}
+\bibitem{mezase}
+ecb, ’ÌÜ’»Ø’¤»’¥×’¥í’¥°’¥é’¥Þ’¡¼, http://www5c.biglobe.ne.jp/~ecb/index.html, 2006.
+\end{thebibliography}
+\end{document}
+
+
+

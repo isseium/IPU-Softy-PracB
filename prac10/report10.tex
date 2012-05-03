@@ -1,0 +1,258 @@
+\documentclass[a4j]{jarticle}
+\usepackage{verbatim}
+\usepackage{ascmac}
+\usepackage[dvips]{graphicx}
+
+\begin{document}
+\newcommand{\inc}[1]{
+\footnotesize
+プログラムのソースと実行結果を以下に示す。
+\begin{itembox}[l]{ソース}
+ \verbatiminput{#1}
+\end{itembox}
+%\normalsize
+}
+
+\newcommand{\inctiny}[1]{
+\tiny
+プログラムのソースと実行結果を以下に示す。
+\begin{itembox}[l]{ソース}
+ \verbatiminput{#1}
+\end{itembox}
+%\normalsize
+}
+
+\section{プログラム作成(1)}
+\inc{1.c}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac10] $./1
+Before : It is a sunny day today.
+After : IT IS A SUNNY DAY TODAY.
+\end{verbatim}
+\end{itembox}
+
+\newpage
+
+\section{プログラム作成(2)}
+\inc{2.c}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac10] $./2
+enter the string.
+LeonardodaVinci
+'A'=2
+'C'=1
+'D'=2
+'E'=1
+'I'=2
+'L'=1
+'N'=2
+'O'=2
+'R'=1
+'V'=1
+[~/report/softB/prac10] $./2
+enter the string.
+Zahl
+'A'=1
+'H'=1
+'L'=1
+'Z'=1
+[~/report/softB/prac10] $./2
+enter the string.
+Laplacian
+'A'=3
+'C'=1
+'I'=1
+'L'=2
+'N'=1
+'P'=1
+\end{verbatim}
+\end{itembox}
+
+\newpage
+
+\section{プログラム作成(3)}
+\inc{3.c}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac10] $./3
+(1234)5 + (1234)5 = (3023)5
+\end{verbatim}
+\end{itembox}
+
+\newpage
+
+\section{プログラム作成(4)}
+\inctiny{4.c}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac10] $./4
+Input: MMCMLXXXIV
+MMCMLXXXIV = 2984
+\end{verbatim}
+\end{itembox}
+
+\newpage
+
+\section{プログラム作成(5)}
+\inc{5.c}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac10] $./5
+--------
+--------
+--------
+---OX---
+---XO---
+--------
+--------
+--------
+\end{verbatim}
+\end{itembox}
+
+\newpage
+
+\section{プログラム作成(6)}
+\inc{6.c}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac10] $./6
+--------
+--------
+--------
+---OX---
+---XO---
+--------
+--------
+--------
+
+--------
+--------
+----O---
+---OO---
+---XO---
+--------
+--------
+--------
+\end{verbatim}
+\end{itembox}
+
+\newpage
+
+\section{プログラム作成(7)}
+\inc{7.c}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac10] $cco 7
+--------
+--------
+--------
+---OX---
+---XO---
+--------
+--------
+--------
+turn: 0 (O:2, X:2)
+
+O x y>4 2
+--------
+--------
+----O---
+---OO---
+---XO---
+--------
+--------
+--------
+turn: 1 (O:4, X:1)
+
+X x y>2 2
+Can't put it here
+--------
+--------
+----O---
+---OO---
+---XO---
+--------
+--------
+--------
+turn: 1 (O:4, X:1)
+
+X x y>
+\end{verbatim}
+\end{itembox}
+
+\newpage
+
+\section{プログラム作成(8)}
+\inctiny{8.c}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac10] $./8
+--------
+--------
+--------
+---OX---
+---XO---
+--------
+--------
+--------
+turn: 0 (O:2, X:2)
+O x y>4 2
+--------
+--------
+----O---
+---OO---
+---XO---
+--------
+--------
+--------
+turn: 1 (O:4, X:1)
+X x y>3 2
+--------
+--------
+---XO---
+---XO---
+---XO---
+--------
+--------
+--------
+turn: 2 (O:3, X:3)
+O x y>2 3
+--------
+--------
+---XO---
+--OOO---
+---XO---
+--------
+--------
+--------
+turn: 3 (O:5, X:2)
+X x y>5 2
+--------
+--------
+---XXX--
+--OOX---
+---XO---
+--------
+--------
+--------
+turn: 4 (O:3, X:5)
+\end{verbatim}
+\end{itembox}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

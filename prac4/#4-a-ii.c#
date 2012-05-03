@@ -1,0 +1,16 @@
+/* 4-a-ii.c */
+#include <stdio.h>
+
+int main()
+{
+  int i,n,t=0;
+
+  printf("Input Number : ");
+  scanf("%d",&n);
+
+  t = n * (n + 1)(n + 2) / 4
+
+  printf("Total : %d\n", t);
+
+  return 0;
+}

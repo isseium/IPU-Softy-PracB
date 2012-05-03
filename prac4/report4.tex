@@ -1,0 +1,317 @@
+\documentclass[a4j]{jarticle}
+\usepackage{verbatim}
+\usepackage{ascmac}
+
+\begin{document}
+
+\newcommand{\inc}[1]{
+プログラムのソースと実行結果を以下に示す。
+\scriptsize
+\begin{itembox}[l]{ソース}
+ \verbatiminput{#1}
+\end{itembox}
+\normalsize
+}
+
+\section{型で表現できる範囲}
+型によって表現できる範囲を表~\ref{tab:1}に示す。
+\begin{table}[h]
+\label{tab:1}
+\caption{型で表現できる範囲(1)}
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+型 & 整数の範囲\\
+\hline
+unsigned short int & 0 〜 65535\\
+signed short int & -32768 〜 32767\\
+unsigned int & 0 〜 4294967295\\
+signed int & -2147483648 〜 2147483647\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+求める方法を以下に示す。
+\begin{itemize}
+\item unsigned （無符合）の場合\\
+それぞれの型のデータサイズを n ビットとすると、
+\[
+ 0 〜 2^{n} - 1
+\]
+で範囲を求めることができる。
+
+\item signed （有符合）の場合\\
+それぞれの型のデータサイズを n ビットとすると、
+\[
+ -2^{n-1} 〜 2^{n-1} - 1
+\]
+で範囲を求めることができる。
+
+\end{itemize}
+
+
+\newpage
+\section{プログラム作成(1)}
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\item \
+\inc{2-a.c}
+\scriptsize
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac4] $./2-a
+Input fruit name. [b, a, or o] : b
+Input number : 21
+Total : 1260 yen.
+[~/report/softB/prac4] $./2-a
+Input fruit name. [b, a, or o] : a
+Input number : 33
+Total : 4125 yen.
+[~/report/softB/prac4] $./2-a
+Input fruit name. [b, a, or o] : o
+Input number : 12
+Total : 984 yen.
+\end{verbatim}
+\end{itembox}
+\normalsize
+
+\newpage
+
+\item \
+\inc{2-b.c}
+\scriptsize
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac4] $./2-b
+Currency initial :U
+Price(JPY):3000
+3000.00 yen -> 25.50 USD
+[~/report/softB/prac4] $./2-b
+Currency initial :G
+Price(JPY):3000
+3000.00 yen -> 13.58 GBDP
+[~/report/softB/prac4] $./2-b
+Currency initial :E
+Price(JPY):3000
+3000.00 yen -> 20.11 EUR
+[~/report/softB/prac4] $./2-b
+Currency initial :K
+Price(JPY):3000
+3000.00 yen -> 24424.00 KRW
+\end{verbatim}
+\end{itembox}
+\normalsize
+
+\newpage
+\item \
+\inc{2-c.c}
+\scriptsize
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac4] $./2-c
+mass [kg]: 15
+E = 1.348133e+18 
+\end{verbatim}
+\end{itembox}
+\normalsize
+\end{enumerate}
+
+\section{プログラム作成(2)}
+\inc{3.c}
+\scriptsize
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac4] $./3
+Height[m] : 1.80
+Weight[kg] : 65.0
+BMI : 20.061729
+Standard Weight : 71.279995
+\end{verbatim}
+\end{itembox}
+\normalsize
+
+\section{プログラム作成(3)}
+プログラムのソースと実行結果を次ページに示す。
+\scriptsize
+\begin{itembox}[l]{ソース}
+ \verbatiminput{4.c}
+\end{itembox}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac4] $./4
+(a) n : 11
+rep : 506, formula : 506
+(b) n : 11
+rep : 4356, formula : 4356
+(c) n : 10
+(c) r : 2
+rep : 1023, formula : 1023
+\end{verbatim}
+\end{itembox}
+\normalsize
+
+\section{プログラム作成(4)}
+\inc{5.c}
+\scriptsize
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac4] $./5
+n : 10
+a : 2
+r : 3
+88562
+\end{verbatim}
+\end{itembox}
+\normalsize
+
+\section{プログラム作成(5)}
+\inc{6.c}
+\scriptsize
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac4] $./6
+x1 :3.0
+y1 :3.0
+x2 :1.0
+y2 :-2.0
+x3 :-2.0
+y3 :2.0
+(x ,y) = (0.804348, 0.978261)
+\end{verbatim}
+\end{itembox}
+\normalsize
+
+\section{プログラム作成(6)}
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\item \
+\inc{7-a.c}
+\scriptsize
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac4] $./7-a
+a : 175
+b : 52
+a + b = 227 (d)
+a + b = e3 (h)
+a - b = 123 (d)
+a - b = 7b (h)
+a * b = 9100 (d)
+a * b = 238c (h)
+a / b = 3 (d)
+a / b = 3 (h)
+[~/report/softB/prac4] $./7-a
+a : 10
+b : 0
+a + b = 10 (d)
+a + b = a (h)
+a - b = 10 (d)
+a - b = a (h)
+a * b = 0 (d)
+a * b = 0 (h)
+Cannot divide
+\end{verbatim}
+\end{itembox}
+\normalsize
+
+\newpage
+\item \
+\inc{7-b.c}
+\scriptsize
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+c : 28014.12453
+d : 163.910705
+c + d = 28178.0352
+c + d = 2.817804e+04
+c - d = 27850.2148
+c - d = 2.785021e+04
+c * d = 4591814.9017
+c * d = 4.591815e+06
+c / d = 170.9109
+c / d = 1.709109e+02
+[~/report/softB/prac4] $./7-b
+c : 10.0
+d : 0.0
+c + d = 10.0000
+c + d = 1.000000e+01
+c - d = 10.0000
+c - d = 1.000000e+01
+c * d = 0.0000
+c * d = 0.000000e+00
+Cannot divide
+\end{verbatim}
+\end{itembox}
+\normalsize
+\end{enumerate}
+
+\newpage
+\section{プログラム作成(7)}
+\inc{8.c}
+\scriptsize
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac4] $./8
+x = 1.414214
+\end{verbatim}
+\end{itembox}
+\normalsize
+
+\section{float型とdouble型における整数の範囲}
+型によって表現できる範囲を表~\ref{tab:test2}に示す。
+\begin{table}[h]
+\caption{型で表現できる範囲(2)}
+\label{tab:test2}
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+型 & 整数の範囲\\
+\hline
+float & $
+     1.175494351 × 10^{-38} 〜 3.402823466  ×  10^{38}
+	$\\
+double & $
+      3.3621031431120935062627 × 10^{-4932} 〜  1.1897314953572317650213 × 10^{4932}
+	$\\
+
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\newpage
+
+\section{プログラム作成(8)}
+\inc{10.c}
+\scriptsize
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac4] $./10
+
+\end{verbatim}
+\end{itembox}
+\normalsize
+\begin{itemize}
+\item 感想\\
+実行するとSolarisのビープ音が鳴った。はじめはエラーかと思ったが、文字コー
+      ドの0x07を調べると、BELというコードであり警告ベルがなるということ
+      だった。また、制御コードを出力することが可能であるとわかった
+      のでほかの制御コードについても調べてみたいと思う。
+
+\end{itemize}
+
+\end{document}
+
+
+
+
+\inc{}
+\scriptsize
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+
+\end{verbatim}
+\end{itembox}
+\normalsize
+

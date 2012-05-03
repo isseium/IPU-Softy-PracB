@@ -1,0 +1,144 @@
+\documentclass[a4j]{jarticle}
+
+\usepackage[dvips]{graphicx}
+\usepackage{ascmac}
+
+\begin{document}
+
+\tableofcontents
+
+\newpage
+
+\section{フローチャート}
+
+指示されたフローチャートを、図~\ref{fig:1-i}〜~\ref{fig:1-viii}に示す。
+
+\begin{figure}[!h]
+\begin{minipage}{.3\linewidth}
+\begin{center}
+\includegraphics{1-i.eps}
+\end{center}
+\caption{(i)}
+\label{fig:1-i}
+\end{minipage}
+\begin{minipage}{.3\linewidth}
+\begin{center}
+\scalebox{.8}[.8]{\includegraphics{1-ii.eps}}
+\end{center}
+\caption{(ii)}
+\label{fig:1-ii}
+\end{minipage}
+\begin{minipage}{.3\linewidth}
+\begin{center}
+\scalebox{.8}[.8]{\includegraphics{1-iii.eps}}
+\end{center}
+\caption{(iii)}
+\label{fig:1-iii}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[!h]
+\begin{minipage}{.45\linewidth}
+\begin{center}
+\scalebox{.8}[.8]{\includegraphics{1-iv.eps}}
+\end{center}
+\caption{(iv)}
+\label{fig:1-iv}
+\end{minipage}
+\begin{minipage}{.45\linewidth}
+\begin{center}
+\scalebox{.8}[.8]{\includegraphics{1-v.eps}}
+\end{center}
+\caption{(v)}
+\label{fig:1-v}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[!h]
+\begin{center}
+\scalebox{.7}[.7]{\includegraphics{1-vi.eps}}
+\end{center}
+\caption{(vi)}
+\label{fig:1-vi}
+\end{figure}
+
+
+\begin{figure}[!h]
+\begin{center}
+\scalebox{.8}[.8]{\includegraphics{1-vii.eps}}
+\end{center}
+\caption{(vii)}
+\label{fig:1-vii}
+\end{figure}
+
+\begin{figure}[!h]
+\begin{center}
+\scalebox{.8}[.8]{\includegraphics{1-viii.eps}}
+\end{center}
+\caption{(viii)}
+\label{fig:1-viii}
+\end{figure}
+
+\newpage
+
+\section{ループ端記号を使った反復}
+指示されたフローチャートを、図~\ref{fig:2-c},\ref{fig:2-d}に示す。
+
+\begin{figure}[h]
+\begin{minipage}{0.45\linewidth}
+\begin{center}
+\includegraphics{2-c.eps}
+\end{center}
+\caption{(c)}
+\label{fig:2-c}
+\end{minipage}
+\begin{minipage}{0.45\linewidth}
+\begin{center}
+\includegraphics{2-d.eps}
+\end{center}
+\caption{(d)}
+\label{fig:2-d}
+\end{minipage}
+\end{figure}
+
+\newpage
+
+\section{my\underline{ }name.c}
+ソース、および実行手順と実行結果を以下に示す。
+\begin{itembox}[l]{ソース}
+\begin{verbatim}
+/* myname.c */
+#include <stdio.h>
+
+main()
+{
+  printf("Issei Komatsu\n");
+}
+\end{verbatim}
+\end{itembox}
+\begin{itembox}[l]{実行手順と実行結果}
+\begin{verbatim}
+[~] $cc -o my_name my_name.c
+[~] $./my_name
+Issei Komatsu
+\end{verbatim}
+\end{itembox}
+
+\section{プロセスモデル}
+成長モデル、およびスパイラルモデルについて、ウォータフォールモデルとの違
+いをそれぞれ以下に示す。
+\begin{itemize}
+\item 成長モデル\\
+      ウォータフォールモデルははじめから完成された製品の開発を目指すのに
+      対して、はじめは一部の機能しか持たないソフトウェアをつくり、次第に機能を追
+      加していくモデルである。要求の変化に強いが、開発の管理が難しくなる。
+\item スパイラルモデル\\
+      ウォータフォールモデルははじめから完成された製品の開発を目指すのに
+      対して、システムの一部分の設計実装を行い、プロト
+      タイププログラムを開発し、顧客からのフィードバックなどを経て、またシステムの設計実
+      装を繰り返し行っていく。顧客の要求と開発側の認識のズレを確認しなが
+      ら行うこととなるため、顧客の要求どおりのシステムを完成させやすいが、
+      プロトタイププログラムを作成しなければならないため開発効率が低くな
+      るほか、プロトタイプから最終実装への格上げの判断が難しい。
+\end{itemize}
+\end{document}

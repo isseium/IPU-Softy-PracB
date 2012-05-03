@@ -1,0 +1,61 @@
+/* 8.c */
+#include <stdio.h>
+#include <string.h>
+
+/* ’À°’¿ô’¤ò’Ê¸’»ú’¤Ë’ÊÑ’´¹ */
+void itoa(int src, char *dst)
+{
+  int i,keta;
+
+  if (src < 0){        /* ’Àä’ÂÐ’ÃÍ’¤Ë’¤¹’¤ë */
+    *dst = '-';
+    dst++;
+    src *= -1;
+  }	
+  
+  keta = 1;
+  for(i=10; i<src; i*=10)       /* ’·å’¿ô’¤ò’µá’¤á’¤ë */
+    keta++;
+  
+  for(i=keta-1;i >= 0; i--){
+    *(dst+i) = src % 10 + '0' ; /* 10’¤Ç’³ä’¤Ã’¤¿’Í¾’¤ê’¤ò’Ê¸’»ú’·¿’¤Ë’¤·’¤Æ’³Ê’Ç¼ */
+    src = (src - (src % 10))/ 10; /* (’¸µ’¤Î’¿ô’»ú - ’Í¾’¤ê) / 10 ’¤È’¤¹’¤ë  */
+  }
+  
+  *(dst+keta) = '\0';
+}
+
+/* ’¼Â’¿ô’¤ò’Ê¸’»ú’¤Ë’ÊÑ’´¹ */
+void ftoa(double src, char *dst, int n)
+{
+  char ans[80];
+  int i,keta;
+  
+  for(i=0;i<n;i++)              /* 10^n’ÇÜ’¤¹’¤ë */
+    src *= 10;	
+  
+  itoa((int)src,ans);           /* ’À°’¿ô’Éô’Ê¬’¤ò’ÊÑ’´¹ */
+  
+  keta = strlen(ans);           /* ’Ê¸’»ú’¿ô’¤ò’ÆÀ’¤ë */
+  
+  /* ’²¼n’·å’¤Þ’¤Ç’¤ò 1 ’·å’¸å’¤í’¤Ë’°Ü’Æ° */
+  for(i=0;i<=n;i++)
+    *(ans+keta-i+1) = *(ans+keta-i);
+  
+  *(ans+keta-i+1) = '.';        /* ’¾®’¿ô’ÅÀ’¤ò’ÄÉ’²Ã */
+  *(ans+keta+1) = '\0';         /* ’¥Ì’¥ë’Ê¸’»ú’¤ò’ÄÉ’²Ã */
+  strcpy(dst,ans);              /* ’¥³’¥Ô’¡¼ */
+}
+
+int main()
+{
+  double value;
+  char c[80];
+  
+  scanf("%lf",&value);
+  ftoa(value, c, 3);
+  printf("ftoa: %s\n",c);
+  
+  return 0;
+}
+

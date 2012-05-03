@@ -1,0 +1,166 @@
+\documentclass[a4j]{jarticle}
+\usepackage{verbatim}
+\usepackage{ascmac}
+\usepackage[dvips]{graphicx}
+\usepackage{eclbkbox}
+\usepackage{cprog}
+
+\begin{document}
+\newcommand{\inc}[1]{
+ソースプログラムおよび実行結果を以下に示す。
+\vspace{-0.8cm}
+\footnotesize
+\subsection{ソースプログラム}
+\begin{breakbox}
+\verbatiminput{#1}
+\end{breakbox}
+\vspace{-0.7cm}
+\subsection{実行結果}
+}
+
+\section{プログラム作成(1)}
+\inc{1.c}
+\begin{breakbox}
+\begin{verbatim}
+[~/report/softB/prac13] $./1
+Total quantity of トンカツ is 45.000000 in メニュー.
+\end{verbatim}
+\end{breakbox}
+
+\section{プログラム作成(2)}
+\inc{2-b-2.txt}
+\begin{breakbox}
+\begin{verbatim}
+[~/report/softB/prac13] $./2 
+Total quantity of ごはん is 45.000000 in メニュー.
+Total quantity of 味噌汁 is 20.000000 in メニュー.
+Total quantity of 麺 is 40.000000 in メニュー.
+Total quantity of スープ is 40.000000 in メニュー.
+Total quantity of トンカツ is 45.000000 in メニュー.
+Total quantity of キャベツ is 20.000000 in メニュー.
+Total quantity of 玉子 is 25.000000 in メニュー.
+\end{verbatim}
+\end{breakbox}
+
+\newpage
+
+\section{プログラム作成(3)}
+\inc{3a.c}
+\begin{breakbox}
+\begin{verbatim}
+[~/report/softB/prac13] $./3 
+Total quantity of 玉子 is 45.000000 in メニュー.
+\end{verbatim}
+\end{breakbox}
+
+\section{プログラム作成(4)}
+\inc{4a.c}
+\begin{breakbox}
+\begin{verbatim}
+[~/report/softB/prac13] $cco 4
+Total quantity of ごはん is 50.000000 in メニュー.
+\end{verbatim}
+\end{breakbox}
+
+\section{プログラム作成(5)}
+\inc{5.c}
+\begin{breakbox}
+\begin{verbatim}
+[~/report/softB/prac13] $./5
+Total quantity of トンカツ is 45.000000 in メニュー.
+\end{verbatim}
+\end{breakbox}
+
+\section{プログラム作成(6)}
+\inc{6.c}
+\begin{breakbox}
+\begin{verbatim}
+[~/report/softB/prac13] $./6
+Total quantity of コッペパン is 125.000000[個] in メニュー.
+Total quantity of アンペースト is 6000.000000[g] in メニュー.
+Total quantity of バター is 750.000000[g] in メニュー.
+Total quantity of ピーナッツクリーム is 2750.000000[g] in メニュー.
+Total quantity of ジャム is 750.000000[g] in メニュー.
+Total quantity of 食パン is 10.000000[斤] in メニュー.
+\end{verbatim}
+\end{breakbox}
+
+\section{プログラム作成(7)}
+\inc{7.c}
+\begin{breakbox}
+\begin{verbatim}
+[~/report/softB/prac13] $./7
+Total quantity of シリンダ（直4用） is 10.000000 in オーダ.
+Total quantity of シリンダヘッド is 22.000000 in オーダ.
+Total quantity of シリンダヘッドカバー is 22.000000 in オーダ.
+Total quantity of カムシャフト is 44.000000 in オーダ.
+Total quantity of ボルト is 320.000000 in オーダ.
+Total quantity of クランクケース（直4用） is 10.000000 in オーダ.
+Total quantity of クランクシャフト（直4用） is 10.000000 in オーダ.
+Total quantity of クランクケースカバー is 10.000000 in オーダ.
+Total quantity of ピストン is 92.000000 in オーダ.
+Total quantity of ガスケット is 92.000000 in オーダ.
+Total quantity of コンロッド is 92.000000 in オーダ.
+Total quantity of ピストンクリップ is 184.000000 in オーダ.
+Total quantity of シリンダ（V8用） is 12.000000 in オーダ.
+Total quantity of クランクケース（V8用） is 6.000000 in オーダ.
+\end{verbatim}
+\end{breakbox}
+
+
+\section{プログラム作成(8)}
+\inc{8.c}
+\begin{breakbox}
+\begin{verbatim}
+Input height[m] : 1.70
+Input weight[kg] : 60.0
+BMI : 20.761246, NormalWeight : 63.580002
+\end{verbatim}
+\end{breakbox}
+
+\section{プログラム作成(9)}
+\inc{9.c}
+\begin{breakbox}
+\begin{verbatim}[~/report/softB/prac13] $./9
+Numerator: 0
+Denominator: 13
+0/13 -> 0/1
+[~/report/softB/prac13] $./9
+Numerator: 1
+Denominator: 2
+1/2 -> 1/2
+[~/report/softB/prac13] $./9
+Numerator: 26
+Denominator: 52
+26/52 -> 1/2
+[~/report/softB/prac13] $./9
+Numerator: 36
+Denominator: 24
+36/24 -> 3/2
+\end{verbatim}
+\end{breakbox}
+
+\section{プログラム作成(10)}
+\inc{10.c}
+\begin{breakbox}
+\begin{verbatim}
+[~/report/softB/prac13] $cco 10
+Point (x,y): ^C
+[~/report/softB/prac13] $./10
+Point (x,y): (0,0)
+Rectangle doesn't contain the point (0,0)
+[~/report/softB/prac13] $./10
+Point (x,y): (10,60)
+Rectangle contains the point (10,60)
+\end{verbatim}
+\end{breakbox}
+
+\end{document}
+
+\begin{breakbox}
+\begin{verbatim}
+
+\end{verbatim}
+\end{breakbox}
+
+

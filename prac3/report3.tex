@@ -1,0 +1,452 @@
+\documentclass[a4j]{jarticle}
+
+\usepackage{ascmac}
+
+\begin{document}
+\section{最大値を求めるプログラム}
+プログラムのソースと実行結果を以下に示す。
+\footnotesize
+\begin{itembox}[l]{ソース}
+\begin{verbatim}
+/* 1.c */
+#include <stdio.h>
+
+int main()
+{
+  int x, y, z, max;
+
+  max = 0;
+
+  printf("x: ");
+  scanf("%d", &x);
+  printf("y: ");
+  scanf("%d", &y);
+  printf("z: ");
+  scanf("%d", &z);
+
+  if (x > max ){
+    max = x;
+  }
+  if (y > max){
+    max = y;
+  }
+  if (z > max){
+    max = z;
+  }
+
+  printf("max = %d\n",max);
+
+  return 0;
+}
+\end{verbatim}
+\end{itembox}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac3] $cc -o 1 1.c
+[~/report/softB/prac3] $./1
+x: 3
+y: 4
+z: 5
+max = 5
+\end{verbatim}
+\end{itembox}
+
+\newpage
+
+\normalsize
+\section{月の名前を返すプログラム}
+プログラムのソースと実行結果を以下に示す。
+\footnotesize
+\begin{itembox}[l]{ソース}
+\begin{verbatim}
+/* 2.c */
+#include <stdio.h>
+
+int main()
+{
+  int month;
+
+  printf("month : ");
+  scanf("%d",&month);
+
+  switch(month){
+  case 1:
+    printf("January\n");
+    break;
+  case 2:
+    printf("February\n");
+    break;
+  case 3:
+    printf("March\n");
+    break;
+  case 4:
+    printf("April\n");
+    break;
+  case 5:
+    printf("May\n");
+    break;
+  case 6:
+    printf("June\n");
+    break;
+  case 7:
+    printf("July\n");
+    break;
+  case 8:
+    printf("August\n");
+    break;
+  case 9:
+    printf("September\n");
+    break;
+  case 10:
+    printf("October\n");
+    break;
+  case 11:
+    printf("November\n");
+    break;
+  case 12:
+    printf("December\n");
+    break;
+  defalut:
+    printf("Invalid number\n");
+    return -1;
+  }
+
+  return 0;
+}
+\end{verbatim}
+\end{itembox}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac3] $cc -o 2 2.c
+[~/report/softB/prac3] $./2
+month : 6
+June
+\end{verbatim}
+\end{itembox}
+
+\normalsize
+\section{1 から 20 のなかの奇数を求めるプログラム}
+プログラムのソースと実行結果を以下に示す。
+\footnotesize
+\begin{itembox}[l]{ソース}
+\begin{verbatim}
+/* 3.c */
+#include <stdio.h>
+
+int main()
+{
+  int i;
+
+  for(i=1;i<=20;i++)
+    if ((i % 2)==1)
+      printf("%d ", i);
+
+  printf("\n");
+
+  return 0;
+}
+\end{verbatim}
+\end{itembox}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac3] $cc -o 3 3.c
+[~/report/softB/prac3] $./3
+1 3 5 7 9 11 13 15 17 19
+\end{verbatim}
+\end{itembox}
+
+\section{1 から 40 のなかの 4 の倍数を求めるプログラム }
+プログラムのソースと実行結果を以下に示す。
+\begin{itembox}[l]{ソース}
+\begin{verbatim}
+/* 4.c */
+#include <stdio.h>
+
+int main()
+{
+  int i;
+
+  for(i=1;i<=40;i++)
+    if ((i % 4)==0)
+      printf("%d ", i);
+
+  printf("\n");
+
+  return 0;
+}
+\end{verbatim}
+\end{itembox}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac3] $cc -o 4 4.c
+[~/report/softB/prac3] $./4
+4 8 12 16 20 24 28 32 36 40 
+\end{verbatim}
+\end{itembox}
+
+\newpage
+
+\normalsize
+\section{九九の表を表示するプログラム}
+プログラムのソースと実行結果を以下に示す。
+\footnotesize
+\begin{itembox}[l]{ソース}
+\begin{verbatim}
+/* 5.c */
+#include <stdio.h>
+
+int main()
+{
+  int i,j;
+
+  for(i=1;i<10;i++){
+    for(j=1;j<10;j++)
+      printf("%3d",i*j);
+    printf("\n");
+  }
+      
+  return 0;
+}
+\end{verbatim}
+\end{itembox}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac3] $cc -o 5 5.c
+[~/report/softB/prac3] $./5
+  1  2  3  4  5  6  7  8  9
+  2  4  6  8 10 12 14 16 18
+  3  6  9 12 15 18 21 24 27
+  4  8 12 16 20 24 28 32 36
+  5 10 15 20 25 30 35 40 45
+  6 12 18 24 30 36 42 48 54
+  7 14 21 28 35 42 49 56 63
+  8 16 24 32 40 48 56 64 72
+  9 18 27 36 45 54 63 72 81
+\end{verbatim}
+\end{itembox}
+
+\normalsize
+\section{整数の足し算}
+\subsection{while文を用いた場合}
+プログラムのソースと実行結果を以下に示す。
+\footnotesize
+\begin{itembox}[l]{ソース}
+\begin{verbatim}
+/* 6-while.c */
+#include <stdio.h>
+
+int main()
+{
+  int i=0,sum=0;
+
+  while(sum<=1000000){
+    i++;
+    sum += i;
+  }
+  printf("%d\n",i);
+
+  return 0;
+}
+\end{verbatim}
+\end{itembox}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac3] $cc -o 6-while 6-while.c
+[~/report/softB/prac3] $./6-while 
+1414
+\end{verbatim}
+\end{itembox}
+
+\subsection{do文を用いた場合}
+\normalsize
+プログラムのソースと実行結果を以下に示す。
+\footnotesize
+\begin{itembox}[l]{ソース}
+\begin{verbatim}
+/* 6-do.c */
+#include <stdio.h>
+
+int main()
+{
+  int i=0,sum=0;
+
+  do{
+    i++;
+    sum += i;
+  }while(sum<=1000000);
+
+  printf("%d\n",i);
+
+  return 0;
+}
+\end{verbatim}
+\end{itembox}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac3] $cc -o 6-do 6-do.c
+[~/report/softB/prac3] $./6-do 
+1414
+\end{verbatim}
+\end{itembox}
+
+\newpage
+\section{2 から 50 の素数を表示するプログラム}
+\normalsize
+プログラムのソースと実行結果を以下に示す。
+\footnotesize
+\begin{itembox}[l]{ソース}
+\begin{verbatim}
+/* 7.c */
+#include <stdio.h>
+
+int main()
+{
+  int i,j,flag;
+
+  for(i=2;i<=50;i++){
+    flag = 0;
+    for(j=2;j<i;j++)
+      if(i%j==0){
+        flag = 1;
+        break;
+      }    
+    if(flag == 0)
+      printf("%d ",i);
+  }
+
+  printf("\n");
+
+  return 0;
+}
+\end{verbatim}
+\end{itembox}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac3] $cc -o 7 7.c
+[~/report/softB/prac3] $./7
+2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 
+\end{verbatim}
+\end{itembox}
+
+\newpage
+\section{除算を行うプログラム}
+\normalsize
+プログラムのソースと実行結果を以下に示す。
+\footnotesize
+\begin{itembox}[l]{ソース}
+\begin{verbatim}
+/* 8.c */
+#include <stdio.h>
+
+int main()
+{
+  int x,y,i;
+
+  printf("x : ");
+  scanf("%d",&x);
+
+  printf("y : ");
+  scanf("%d",&y);
+
+  if (y == 0){                  /* 0 で割るを禁止 */
+    printf("error\n");
+    return -1;
+  }
+
+  printf("%d",x/y);             /* 整数部分の商を表示 */
+
+  if(x%y!=0){
+    printf(".");
+    for(i=0;i<20;i++){
+      x = x % y * 10;             /* 余りを出し10倍する */
+      if(x == 0)                  /* 余りが 0 であったらループを抜ける */
+        break;
+      printf("%d",x / y );
+    }
+  }
+  printf("\n");
+
+  return 0;
+}
+\end{verbatim}
+\end{itembox}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac3] $cc -o 8 8.c
+[~/report/softB/prac3] $./8
+x : 150
+y : 63
+2.38095238095238095238
+\end{verbatim}
+\end{itembox}
+
+\newpage
+\section{ツルカメ算}
+\normalsize
+プログラムのソースと実行結果を以下に示す。
+\footnotesize
+\begin{itembox}[l]{ソース}
+\begin{verbatim}
+/* 9.c */
+#include <stdio.h>
+
+int main()
+{
+  int t, f, turu, kame, i;
+
+  printf("Total : ");
+  scanf("%d",&t);
+
+  printf("Number of foot : ");
+  scanf("%d", &f);
+
+  turu = t;                     /* すべて鶴とみなす */
+  kame = 0;
+
+  while(turu * 2 + kame * 4 != f){
+    turu--;
+    kame++;
+    if(turu<0){
+      printf("No answer\n");
+      return -1;
+    }
+  }
+
+  printf("Turu : %d, Kame : %d\n", turu, kame);
+
+  return 0;
+}
+\end{verbatim}
+\end{itembox}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac3] $cc -o 9 9.c
+[~/report/softB/prac3] $./9 
+Total : 8
+Number of foot : 26
+Turu : 3, Kame : 5
+\end{verbatim}
+\end{itembox}
+
+
+\end{document}
+
+
+
+\normalsize
+プログラムのソースと実行結果を以下に示す。
+\footnotesize
+\begin{itembox}[l]{ソース}
+\begin{verbatim}
+
+\end{verbatim}
+\end{itembox}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+
+\end{verbatim}
+\end{itembox}
+
+
+
+

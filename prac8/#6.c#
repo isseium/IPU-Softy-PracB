@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main()
+{
+  int day,month;
+  int i;
+  int m_month[]={31,28,31,30,31,30,31,31,30,30,31}; /* ’·î’¤Î’ºÇ’Âç’ÃÍ */
+  char *month2[12] = {"Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"};
+  char *constellation[12] = {"ARIES","TAURUS","GEMINI","CANCER","LEO","VIRGO","LIBRA" ,"SCORPIO"
+                               ,"SAGITTARIUS","CAPRICORN","AQUARIUS","PISCES"}; /* ’À±’ºÂ’Ì¾ */
+  int term[12][2] = {{4,19},{5,20},{6,21},{7,22},{8,22},{9,22}
+                     ,{10,23},{11,21},{12,21},{1,19},{2,18},{3,20}}; /* ’À±’ºÂ’¤Î’´ü’´Ö’¤Î’½ª’Î»’Æü */
+  
+  
+  printf("Enter your birthday [mm/dd] : ");
+  scanf("%d/%d", &month, &day);
+  
+  /* ’Æþ’ÎÏ’Æâ’ÍÆ’¤Î’¥Á’¥§’¥Ã’¥¯ */
+  if (month < 1 || month > 12 || day < 1 || day > m_month[month-1]){
+    printf("Error : strange data was entered.\n");
+    return -1;
+  }
+  
+  /* ’Æü’ÉÕ’¤Î’½Ð’ÎÏ */
+  printf("Your birth day is %s. %d.\n", *(month2 + month - 1), day);
+  
+  /* ’À±’ºÂ’¤ò’»»’½Ð */
+  for(i=0;month != term[i][0]; i++);
+  
+  if(term[i][1] < day){
+    i++;
+    if (i == 12 ) i = 0;
+  }
+  
+  /* ’À±’ºÂ’¤ò’É½’¼¨ */
+  printf("Therefore, your constellation is the %s.\n", *(constellation + i));
+  
+  return 0;
+}
+   

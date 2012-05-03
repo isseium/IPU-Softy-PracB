@@ -1,0 +1,203 @@
+\documentclass[a4j]{jarticle}
+\usepackage{verbatim}
+\usepackage{ascmac}
+\usepackage[dvips]{graphicx}
+
+\begin{document}
+\newcommand{\inc}[1]{
+\footnotesize
+プログラムのソースと実行結果を以下に示す。
+\begin{itembox}[l]{ソース}
+ \verbatiminput{#1}
+\end{itembox}
+%\normalsize
+}
+
+\newcommand{\inctiny}[1]{
+\tiny
+プログラムのソースと実行結果を以下に示す。
+\begin{itembox}[l]{ソース}
+ \verbatiminput{#1}
+\end{itembox}
+%\normalsize
+}
+
+\section{構造体の定義}
+構造体の定義と解説を以下に示す。
+\footnotesize
+\begin{screen}
+ \verbatiminput{1.c}
+\end{screen}
+\normalsize
+
+\newpage
+
+\section{プログラム作成(1)}
+\inc{2.c}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac11] $./2
+Input Student Number :2006063   
+Student Number: 2006063
+Name(JPN): 小松 一星
+Name(ENG): Issei KOMATSU
+Birthday: 19880224
+UserID: g031e063
+gender: Male
+PC: Have
+\end{verbatim}
+\end{itembox}
+
+\section{プログラム作成(2)}
+\footnotesize
+プログラムのソースと実行結果を次ページ以降に示す。
+\begin{itembox}[l]{ソース}
+ \verbatiminput{3.c}
+\end{itembox}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac11] $cco 3
+Student Number: 2006063
+Name(JPN) [Family First]: 小松 一星
+First name(ENG) [First Family]: Issei KOMATSU
+Birthday [yyyy/mm/dd]: 1988/02/24
+UserID: g031e063
+Gender [0:Unknown, 1:male, 2:female]: 1
+PC [0:Unknown, 1:Have, 2:No have]: 1
+
+Student Number: 2006063
+Family Name(JPN): 小松
+Frist Name(JPN): 一星
+Family Name(ENG): Issei
+Frist Name(ENG): KOMATSU
+Brithday : 1988/2/24
+UserID: g031e063
+Gender: Male
+PC: Have
+\end{verbatim}
+\end{itembox}
+
+\normalsize
+\section{ポインタ}
+\renewcommand{\labelenumi}{(\roman{enumi})}
+\begin{enumerate}
+\item \
+構造体宣言時に各メンバを初期化しているため、char 型ポインタには初期化時
+      の文字列が格納されている先頭アドレスが代入することができる。よって
+      正しく動作することができた。
+\item \
+構造体宣言時に各メンバを初期化せずに標準入力から与えられた値を代入して
+      いることから、char 型ポインタの実体がないため不正なメモリ領域に値を代
+      入してしまいエラーが発生する。
+\end{enumerate}
+
+\newpage
+
+\section{プログラム作成(3)}
+\inc{5.c}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac11] $./5
+Input point a [x y]: 2.0 3.0
+Input point b [x y]: 4.0 -6.0
+Slope : -4.500000
+\end{verbatim}
+\end{itembox}
+
+\newpage
+
+\section{プログラム作成(4)}
+\inc{6.c}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac11] $./6
+曜日を入力してください. : Friday
+時限を入力してください. : 2
+授業科目 : ソフトウェア演習B
+担当教員氏名 : 全教員
+教室 : 学生研究室
+\end{verbatim}
+\end{itembox}
+
+\newpage
+
+\section{プログラム作成(5)}
+\inc{7.c}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac11] $./7
+Payment [yen] : 460
+Deposit [yen] : 10000
+5000 yen bill : 1
+1000 yen bill : 4
+ 500 yen coin : 1
+ 100 yen coin : 0
+  50 yen coin : 0
+  10 yen coin : 4
+Change is 9540 yen.
+\end{verbatim}
+\end{itembox}
+
+\newpage
+
+\section{プログラム作成(6)}
+\inc{8.c}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac11] $./8
+sin45.000°= 0.707107
+\end{verbatim}
+\end{itembox}
+
+\newpage
+
+\section{プログラム作成(7)}
+\inc{9.c}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac11] $./9
+Enter current time [hh:mm] : 12:34
+   Departure   Waiting time
+1)    12:41       7 [min.]
+2)    13:15      41 [min.]
+3)    13:41      67 [min.]
+[~/report/softB/prac11] $./9
+Enter current time [hh:mm] : 20:34
+   Departure   Waiting time
+1)    20:49      15 [min.]
+2)    21:50      76 [min.]
+\end{verbatim}
+\end{itembox}
+
+\newpage
+
+\section{プログラム作成(8)}
+\inc{10.c}
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac11] $./10
+Input station code of depature    : 11
+Input station code of destination : 12
+The fare between 一戸 and 二戸 is 300 [yen].
+[~/report/softB/prac11] $./10
+Input station code of depature    : 6
+Input station code of destination : 2
+The fare between いわて沼宮内 and 滝沢 is 500 [yen].
+\end{verbatim}
+\end{itembox}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

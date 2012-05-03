@@ -1,0 +1,189 @@
+\documentclass[a4j]{jarticle}
+\usepackage{verbatim}
+\usepackage{ascmac}
+\usepackage[dvips]{graphicx}
+
+\begin{document}
+
+\newcommand{\inc}[1]{
+プログラムのソースと実行結果を以下に示す。
+\scriptsize
+\begin{itembox}[l]{ソース}
+ \verbatiminput{#1}
+\end{itembox}
+\normalsize
+}
+
+\section{フィボナッチ数列}
+\inc{1.c}
+\scriptsize
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac56] $./1
+Input number : 6
+fib(6) = 8
+\end{verbatim}
+\end{itembox}
+\normalsize
+
+\newpage
+
+\section{Ackermann}
+\inc{2.c}
+\scriptsize
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac56] $./2
+m : 3
+n : 4
+Ackermann(3,4) = 125
+\end{verbatim}
+\end{itembox}
+\normalsize
+
+\newpage
+
+
+\section{ユークリッドの互除法}
+\inc{3.c}
+\scriptsize
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac56] $./3
+m : 112
+n : 42
+Highest common factor : 14
+\end{verbatim}
+\end{itembox}
+\normalsize
+
+
+\newpage
+
+\section{再帰を用いたプログラム}
+\inc{4.c}
+\scriptsize
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac56] $./4
+n : 5
+r : 3
+siguma_f(i) = 121
+\end{verbatim}
+\end{itembox}
+\normalsize
+
+\newpage
+
+\section{ハノイの塔}
+\inc{5.c}
+\scriptsize
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac56] $./5
+How many disks? : 3
+From where? [1-3] : 1
+To where? [1-3] : 3
+Move disk 1 from pole 1 to pole 3
+Move disk 2 from pole 1 to pole 2
+Move disk 1 from pole 3 to pole 2
+Move disk 3 from pole 1 to pole 3
+Move disk 1 from pole 2 to pole 1
+Move disk 2 from pole 2 to pole 3
+Move disk 1 from pole 1 to pole 3
+\end{verbatim}
+\end{itembox}
+\normalsize
+
+
+\section{extern.c のスコープ}
+extern.cの変数に関するスコープを図~\ref{fig:6}に示す。
+\begin{figure}[h]
+\begin{center}
+\includegraphics{6.eps}
+\end{center}
+\caption{extern.cの変数に関するスコープ}
+\label{fig:6}
+\end{figure}
+
+\newpage
+
+\section{スコープ}
+coulomb-main.c,coulomb-function.cの変数に関するスコープを図~\ref{fig:7}に示す。
+\begin{figure}[!h]
+\begin{center}
+\resizebox{\textwidth}{!}{\includegraphics{7.eps}}
+\end{center}
+\caption{coulomb-main.c,coulomb-function.cの変数に関するスコープ}
+\label{fig:7}
+\end{figure}
+
+\newpage
+
+\section{入力文字判別}
+プログラムのソースと実行結果を以下に示す。また流れ図を図~\ref{fig:8}に示
+す。
+\scriptsize
+\begin{itembox}[l]{ソース}
+ \verbatiminput{8.c}
+\end{itembox}
+\normalsize
+
+\scriptsize
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac56] $./8  
+input? : a
+Small letter
+input? : A
+Capital letter
+input? : 1
+Number
+input? : -
+Others
+input? :  
+\end{verbatim}
+\end{itembox}
+\normalsize
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics{8.eps}
+\end{center}
+\caption{流れ図}
+\label{fig:8}
+\end{figure}
+
+\newpage
+
+\section{タンクの体積を求めるプログラム}
+\inc{9.c}
+\scriptsize
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac56] $./9
+d : 30.0 , Vol : 14137.166941
+d : 25.0 , Vol : 8181.230869
+\end{verbatim}
+\end{itembox}
+\normalsize
+
+
+\section{メダルの原価}
+\inc{10.c}
+\scriptsize
+\begin{itembox}[l]{実行結果}
+\begin{verbatim}
+[~/report/softB/prac56] $./10
+Input radius : 3.0
+Input thickness : 0.6
+Gold medal : 433499.825137
+Silver medal : 3163.558669
+Bronze medal : 33.495297
+\end{verbatim}
+\end{itembox}
+\normalsize
+
+
+\end{document}
+
