@@ -1,4 +1,5 @@
 /* 8.c */
+// hello
 #include <stdio.h>
 
 int main()
